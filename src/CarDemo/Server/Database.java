@@ -19,7 +19,7 @@ public class Database {
     
     private final List <Car> allCars = new ArrayList<>();
     
-    Database(){
+    public Database(){
         allCars.add(c1);
         allCars.add(c2);
         allCars.add(c3);
