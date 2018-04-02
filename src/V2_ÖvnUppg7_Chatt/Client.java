@@ -24,7 +24,6 @@ public class Client  extends JFrame implements ActionListener {
     JTextArea txt = new JTextArea();
     JScrollPane sp = new JScrollPane(txt);
     JTextField skriv = new JTextField();
-    JButton sluta = new JButton("Koppla ner");
     private BufferedReader in;
     private PrintWriter out;
     String name = "";
@@ -51,11 +50,8 @@ public class Client  extends JFrame implements ActionListener {
             String fromServer;
 
             while ((fromServer = (String)in.readLine()) != null) {
-                
-                if (fromServer.startsWith("WAITING_FOR_NAME")){
-                    out.println(name);
-                }
-
+                //Nu består vårt protokoll bara av ett state, väntan på meddelanden
+                //om vi hade haft flera hade det varit läge att kolla state här
                 if (fromServer.startsWith("MESSAGE")){
                     txt.append(fromServer.substring(8) + "\n");
                 }
@@ -66,10 +62,9 @@ public class Client  extends JFrame implements ActionListener {
         }
     }
 
-
+    //här hamnar vi när vi skrivit i textfältet och tryckt på enter
     public void actionPerformed(ActionEvent e) {
         try{
-            System.out.println("in action Performed "+name +" : " + skriv.getText());
             out.println(name +" : " + skriv.getText());
             skriv.setText("");
         }

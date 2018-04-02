@@ -9,17 +9,15 @@ import java.net.Socket;
 
 public class Handler extends Thread{
     
-    private String name;
     private Socket socket;
-    private UserTracker userTracker;
+    private MultiWriter multiWriter;
     private PrintWriter out;
     private BufferedReader in;
     int id;
     
-    public Handler (Socket socket, UserTracker userTracker, int id){
+    public Handler (Socket socket, MultiWriter multiWriter){
         this.socket = socket;
-        this.userTracker = userTracker;
-        this.id = id;
+        this.multiWriter = multiWriter;
     }
     
     public void run(){
@@ -27,23 +25,16 @@ public class Handler extends Thread{
          try{
             out = new PrintWriter(socket.getOutputStream(), true);  //true for autoflush
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            out.println("WAITING_FOR_NAME");
-            name = in.readLine();
-            
-            //add name to userTracers list of klients
-            synchronized (userTracker) {
-                if (!userTracker.containsName(name)) {
-                    userTracker.addName(name);
-                }
-            }
-            userTracker.addWriter(out);
+
+            //Vi lägger in vår printWriter i multiWriters lista 
+            multiWriter.addWriter(out);
             
             while(true){
                 String input = in.readLine();
                 if (input == null) {
                     return;
                 }
-                for (PrintWriter writer : userTracker.getWriters()) {
+                for (PrintWriter writer : multiWriter.getWriters()) {
                     writer.println("MESSAGE " + input);
                 }
             }
@@ -53,12 +44,9 @@ public class Handler extends Thread{
              e.printStackTrace();
          }
          finally {
-            // Klienten har stängts ner. Vi behöver städa ur userTrackern
-            if (name != null) {
-                userTracker.removeName(name);
-            }
+            // Klienten har stängts ner. Vi städar ur multiWritern
             if (out != null) {
-                userTracker.removeWriter(out);
+                multiWriter.removeWriter(out);
             }
             try {
                 socket.close();
