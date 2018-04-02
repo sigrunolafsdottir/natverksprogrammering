@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
+//Kod modifierad utifrån exemplen på http://cs.lmu.edu/~ray/notes/javanetexamples/
 
    /**
      * The class for the helper threads in this multithreaded server

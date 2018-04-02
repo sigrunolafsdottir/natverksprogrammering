@@ -1,5 +1,7 @@
 package V2_ÖvnUppg7_Chatt;
 
+//Kod modifierad utifrån exemplen på http://cs.lmu.edu/~ray/notes/javanetexamples/
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

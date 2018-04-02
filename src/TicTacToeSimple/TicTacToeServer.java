@@ -2,6 +2,8 @@ package TicTacToeSimple;
 
 import java.net.ServerSocket;
 
+//Kod modifierad utifrån exemplen på http://cs.lmu.edu/~ray/notes/javanetexamples/
+
 /**
  * A server for a network multi-player tic tac toe game.  Modified and
  * extended from the class presented in Deitel and Deitel "Java How to

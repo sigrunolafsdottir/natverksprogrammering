@@ -1,5 +1,6 @@
 package TicTacToeSimple;
 
+//Kod modifierad utifrån exemplen på http://cs.lmu.edu/~ray/notes/javanetexamples/
 
 /**
  * A two-player game.

@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+//Kod modifierad utifrån exemplen på http://cs.lmu.edu/~ray/notes/javanetexamples/
+
 
 public class ServerListener {
     

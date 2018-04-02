@@ -1,5 +1,7 @@
 package V2_ÖvnUppg7_Chatt;
 
+//Kod modifierad utifrån exemplen på http://cs.lmu.edu/~ray/notes/javanetexamples/
+
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;

@@ -15,6 +15,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+//Kod modifierad utifrån exemplen på http://cs.lmu.edu/~ray/notes/javanetexamples/
+
 /**
  * A client for the TicTacToe game, modified and extended from the
  * class presented in Deitel and Deitel "Java How to Program" book.
