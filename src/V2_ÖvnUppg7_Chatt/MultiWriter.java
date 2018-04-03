@@ -16,7 +16,7 @@ public class MultiWriter {
     private static List<PrintWriter> writers = new ArrayList<PrintWriter>();
     
     public void addWriter(PrintWriter p) {
-        writers.add(p);
+            writers.add(p);
     }
     
     public List<PrintWriter> getWriters() {
@@ -24,7 +24,7 @@ public class MultiWriter {
     }
     
     public void removeWriter(PrintWriter p) {
-        writers.remove(p);
+            writers.remove(p);
     }
 
 }

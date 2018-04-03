@@ -7,7 +7,7 @@ import java.net.SocketException;
 
 public class DatagramReceiver  {
     
-    public static void main(String[] args) throws SocketException, IOException{
+    public void DatagramReceiver() throws SocketException, IOException{
         int minPort = 55555;
         DatagramSocket socket = new DatagramSocket(minPort);
         byte[] data = new byte[256];
@@ -18,5 +18,9 @@ public class DatagramReceiver  {
             String message = new String(packet.getData(), 0, packet.getLength());
             System.out.println(message);
         }
+    }
+    
+    public static void main(String[] args) throws SocketException, IOException{
+        DatagramReceiver dr = new DatagramReceiver();
     }
 }
