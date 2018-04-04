@@ -1,7 +1,5 @@
 package ThreadDemoInterface;
 
-
-
 public class ThreadDemoInterface {
     public static void main(String[] args) throws InterruptedException {
         Skrivare s1 = new Skrivare("Winter", 1);

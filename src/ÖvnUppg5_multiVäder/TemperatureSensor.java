@@ -25,7 +25,6 @@ public class TemperatureSensor {
             System.exit(0); 
         }
         
-        InetAddress toAdr = InetAddress.getLocalHost();
         MulticastSocket socket = new MulticastSocket(port);
         socket.joinGroup(iadr);
         

@@ -1,16 +1,20 @@
-package DatagramDemo;
+package MulticatDemo;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
-import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.net.MulticastSocket;
 import java.net.SocketException;
 import java.time.LocalDateTime;
 
-public class DatagramReceiver  {
+public class MulticastReceiver  {
     
      public static void main(String[] args) throws SocketException, IOException{
-        int minPort = 55555;
-        DatagramSocket socket = new DatagramSocket(minPort);
+        int port = 55555;
+        String ip = "234.235.236.237";
+        InetAddress iadr = InetAddress.getByName(ip);
+        MulticastSocket socket = new MulticastSocket(port);
+        socket.joinGroup(iadr);
         byte[] data = new byte[256];
         while(true){
             DatagramPacket packet = new DatagramPacket(data, data.length);
