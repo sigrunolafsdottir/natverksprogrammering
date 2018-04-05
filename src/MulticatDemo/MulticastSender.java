@@ -1,6 +1,5 @@
 package MulticatDemo;
 
-import DatagramDemo.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -13,9 +12,9 @@ import java.net.UnknownHostException;
 public class MulticastSender {
     
     BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-    String ip = "234.235.236.237";
+    String ip = "239.0.1.2";
     InetAddress iadr = InetAddress.getByName(ip);
-    int port = 55555;
+    int port = 20480;
     MulticastSocket socket = new MulticastSocket(port);
     
     DatagramPacket packet;

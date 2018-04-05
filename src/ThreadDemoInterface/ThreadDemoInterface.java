@@ -14,6 +14,8 @@ public class ThreadDemoInterface {
         s2.aktivitet.interrupt();
         s3.aktivitet.interrupt();
         
+        s1.aktivitet.join();
+        
 
         
     }

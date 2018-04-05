@@ -10,8 +10,8 @@ import java.time.LocalDateTime;
 public class MulticastReceiver  {
     
      public static void main(String[] args) throws SocketException, IOException{
-        int port = 55555;
-        String ip = "234.235.236.237";
+        int port = 20480;
+        String ip = "239.0.1.2";
         InetAddress iadr = InetAddress.getByName(ip);
         MulticastSocket socket = new MulticastSocket(port);
         socket.joinGroup(iadr);
