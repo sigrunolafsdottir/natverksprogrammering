@@ -8,14 +8,17 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 
+
 public class CarClient {
 
-    CarClient(){
+    CarClient() throws IOException{
         String hostName = "127.0.0.1";  //localhost
         int portNumber = 12345;
 
+
     try (
         Socket addressSocket = new Socket(hostName, portNumber);
+            
         PrintWriter out = new PrintWriter(addressSocket.getOutputStream(), true);
         BufferedReader in = new BufferedReader(
             new InputStreamReader(addressSocket.getInputStream()));
@@ -46,7 +49,7 @@ public class CarClient {
         
     }
     
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException{
         CarClient c = new CarClient();
     }
     

@@ -25,7 +25,7 @@ public class CarServer {
             CarProtokoll protocol = new CarProtokoll();
             out.println(protocol.processInput(null));
             
-            while ((inputLine = in.readLine()) != null) {           
+            while ((inputLine = in.readLine()) != null) {          
                out.println(protocol.processInput(inputLine));
             }
         }
