@@ -4,7 +4,6 @@ import java.net.*;
 import java.io.*;
 
 
-
 public class SocketDemo {
 
     public static void main(String[] args) throws Exception {
@@ -15,11 +14,10 @@ public class SocketDemo {
             pw.println("Host: localhost");
             pw.println("");
             pw.flush();
+            
             BufferedReader br = new BufferedReader(new InputStreamReader(s.getInputStream()));
             String t;
             while((t = br.readLine()) != null) System.out.println(t);
             br.close();
-
- 
     }
 }
