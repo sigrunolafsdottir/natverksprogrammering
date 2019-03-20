@@ -1,5 +1,8 @@
 package V1_ÖvnUppg2_ArvInterface;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Övningsuppgift2 {
     
     public void printFordon(Fordon fordon){
@@ -36,9 +39,21 @@ public class Övningsuppgift2 {
         
         IHjulburen bil2 = new Bil(300, 1500, 24);
         IHjulburen cykel2 = new Cykel(30, 15, 24);
+        Printable p = new Cykel(45, 12, 78);
         
-        printAntalHjul(bil2);
+        printAntalHjul(bil);
         printAntalHjul(cykel2);
+        
+        List<Printable> hlist = new ArrayList<>();
+        hlist.add(tåg);
+        hlist.add(båt);
+        hlist.add(bil);
+        hlist.add(cykel);
+        hlist.add(p);
+        
+        for (Printable h : hlist){
+            h.printMe();
+        }
     }
 
     /**
