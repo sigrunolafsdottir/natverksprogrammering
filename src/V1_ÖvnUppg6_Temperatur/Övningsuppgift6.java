@@ -7,14 +7,15 @@ import java.io.FileReader;
 
 public class Övningsuppgift6 {
     public Övningsuppgift6 () {
-        File file = new File("src\\ÖvnUppg6_Temperatur\\temp.txt");
+       // File file = new File("src\\ÖvnUppg6_Temperatur\\temp.txt");
         double temp;
         double tempSum = 0;
         int amountOfDays = 0;
         double maxTemp = -Double.MAX_VALUE;
         double minTemp = Double.MAX_VALUE;
         String tempLine;
-        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+        try (BufferedReader reader = new BufferedReader(
+            new FileReader("src\\V1_ÖvnUppg6_Temperatur\\temp.txt"))) {
             
             while((tempLine = reader.readLine()) != null){
                 
@@ -39,8 +40,10 @@ public class Övningsuppgift6 {
             System.exit(0);
         }
          
-        System.out.println("Maxtemp är "+maxTemp+"\nMintemp är "+minTemp+
-                "\nMedelvärdet är "+tempSum/amountOfDays+" (beräknat över "+amountOfDays+" dagar)");
+        System.out.println("Maxtemp är "+maxTemp+"\n"
+                + "Mintemp är "+minTemp+
+                "\nMedelvärdet är "+tempSum/amountOfDays
+                +" (beräknat över "+amountOfDays+" dagar)");
     }
     
     public static void main(String[] args){

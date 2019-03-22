@@ -14,7 +14,7 @@ public class ÖvnUppg8_LetterCount {
         int[] fördelning = new int[100];
 
         try{
-            URL url = new URL("http://www.puzzlers.org/pub/wordlists/pocket.txt");
+            URL url = new URL("https://raw.githubusercontent.com/dwyl/english-words/master/words.txt");
         
             try (BufferedReader in = new BufferedReader(
                     new InputStreamReader(url.openStream()))) {
