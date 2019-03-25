@@ -58,7 +58,7 @@ import java.awt.*;
         FileReader r = new FileReader(filnamn); 
         area.read(r, null); 
      } 
-     catch (IOException e) {} 
+     catch (IOException e) {e.printStackTrace();} 
    } 
 
    private void sparaFil(String filnamn) { 
@@ -66,7 +66,7 @@ import java.awt.*;
        FileWriter w = new FileWriter(filnamn); 
        area.write(w); 
      }
-     catch (IOException e) {}
+     catch (IOException e) {e.printStackTrace();}
    } 
 
    public static void main (String[] arg) { 
