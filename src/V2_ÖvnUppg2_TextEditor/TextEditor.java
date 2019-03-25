@@ -1,4 +1,4 @@
-package V2_ÖvnUppg8_TextEditor;
+package V2_ÖvnUppg2_TextEditor;
 
 import java.awt.*; 
  import java.awt.event.*; 
