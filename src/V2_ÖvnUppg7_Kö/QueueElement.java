@@ -1,4 +1,4 @@
-package V2_ÖvnUppg6_Kö;
+package V2_ÖvnUppg7_Kö;
 
 public class  QueueElement {
    protected String text;
