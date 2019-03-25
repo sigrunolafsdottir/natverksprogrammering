@@ -7,10 +7,10 @@ class InetAddressDemo
 public static void main(String args[]) throws UnknownHostException, UnsupportedEncodingException { 
     //Mitt eget IP 
     InetAddress Address = InetAddress.getLocalHost(); 
-//    System.out.println(Address); 
-//    System.out.println(Address.getHostAddress()); 
-//    System.out.println(Address.getHostName()); 
-//    System.out.println(Address.isMulticastAddress());
+    System.out.println(Address); 
+    System.out.println(Address.getHostAddress()); 
+    System.out.println(Address.getHostName()); 
+    System.out.println(Address.isMulticastAddress());
 //    
     //Loopback, pekar alltid på den egna datorn
 //    InetAddress loopback = InetAddress.getLoopbackAddress(); 
@@ -24,10 +24,11 @@ public static void main(String args[]) throws UnknownHostException, UnsupportedE
 //    System.out.println(Address); 
     
     //Ett datornamn kan ha flera IP
-    InetAddress SW[] = InetAddress.getAllByName("www.hm.se"); 
-    
-    for (int i=0; i<SW.length; i++) 
-        System.out.println(SW[i]); 
+//    InetAddress SW[] = InetAddress.getAllByName("www.hm.se"); 
+//    
+//    for (int i=0; i<SW.length; i++) {
+//        System.out.println(SW[i]); 
+
    } 
 
 } 

@@ -1,4 +1,4 @@
-package MulticatDemo;
+package MulticastDemo;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
