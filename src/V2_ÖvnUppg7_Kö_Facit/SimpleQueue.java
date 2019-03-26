@@ -1,19 +1,24 @@
-package V2_ÖvnUppg7_Kö;
+package V2_ÖvnUppg7_Kö_Facit;
 
 import java.util.*;
 
  public class SimpleQueue {
-   private List<QueueElement> l = new ArrayList<QueueElement>(); 
+   private List<QueueElement> l = new Vector<QueueElement>(); 
 
    public int size() {  // ger antalet element i kön
      return l.size();
    }
 
    public synchronized void put(QueueElement obj) {
-     System.out.println("Putting "+ obj.getText());
+       System.out.println("Putting "+ obj.getText());
+     int p = Thread.currentThread().getPriority();
      int i;
-     l.add(obj);
-     notify();
+     
+     //leta baklänges i kön tills rätt prio hittas
+     for (i=size()-1; i>=0 && p > ((QueueElement) l.get(i)).pri; i--)
+       ;     
+        l.add(i+1, obj);
+        notify();
      
    }
 

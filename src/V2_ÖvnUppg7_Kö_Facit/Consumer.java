@@ -1,5 +1,4 @@
-package V2_ÖvnUppg7_Kö;
-
+package V2_ÖvnUppg7_Kö_Facit;
 
 
 public class Consumer implements Runnable{
