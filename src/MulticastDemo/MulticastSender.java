@@ -23,7 +23,7 @@ public class MulticastSender {
     String message;
     
     public MulticastSender() throws UnknownHostException, SocketException, IOException{
-        socket.joinGroup(iadr);
+       // socket.joinGroup(iadr);
         System.out.println(prompt);
         while((message = in.readLine()) != null){
             if (message.equals("bye"))  System.exit(0);

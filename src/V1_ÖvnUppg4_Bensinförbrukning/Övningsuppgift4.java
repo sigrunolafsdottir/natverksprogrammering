@@ -1,8 +1,8 @@
-package V1_ÖvnUppg3_Bensinförbrukning;
+package V1_ÖvnUppg4_Bensinförbrukning;
 
 import java.util.Scanner;
 
-public class Övningsuppgift3 {
+public class Övningsuppgift4 {
     
     public Scanner sc = new Scanner(System.in);
 
@@ -12,7 +12,7 @@ public class Övningsuppgift3 {
         return sc.nextDouble();
     }
     
-    public Övningsuppgift3() {
+    public Övningsuppgift4() {
         double currentMätarställning = getInParam("Ange mätarställning nu: ");
         double oldMätarställning = getInParam("Ange mätarställning för ett år sedan: ");
         double amountOfGas = getInParam("Ange antal liter förbrukad bensin: ");
@@ -26,7 +26,7 @@ public class Övningsuppgift3 {
     }
     
     public static void main(String[] args) {
-        Övningsuppgift3 ö = new Övningsuppgift3();
+        Övningsuppgift4 ö = new Övningsuppgift4();
     }
     
 }

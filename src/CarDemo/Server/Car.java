@@ -22,7 +22,8 @@ public class Car {
     }
     
     public String getData(){
-        return "Regnummer: "+regnr+", Owner: "+owner+", Modell: "+model +", Färg: "+color;
+        return "Regnummer: "+regnr+", Owner: "+owner
+                +", Modell: "+model +", Färg: "+color;
     }
 
 }

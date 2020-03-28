@@ -1,4 +1,4 @@
-package V1_ÖvnUppg8_LetterCount;
+package V1_ÖvnUppg9_LetterCount;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -6,9 +6,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 
-public class ÖvnUppg8_LetterCount {
+public class ÖvnUppg9_LetterCount {
 
-    public ÖvnUppg8_LetterCount () {
+    public ÖvnUppg9_LetterCount () {
 
         String temp;
         int[] fördelning = new int[100];
@@ -42,6 +42,6 @@ public class ÖvnUppg8_LetterCount {
     }
     
     public static void main(String[] args){
-        ÖvnUppg8_LetterCount ö = new ÖvnUppg8_LetterCount();
+        ÖvnUppg9_LetterCount ö = new ÖvnUppg9_LetterCount();
     }
 }

@@ -1,11 +1,11 @@
-package V1_ÖvnUppg5_SedlarOchMynt;
+package V1_ÖvnUppg6_SedlarOchMynt;
 
 import java.util.InputMismatchException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 
-public class Övningsuppgift5 {
+public class Övningsuppgift6 {
     
     private static String s = new String();
     private static int[] sedlarOchMynt = {1000,500,200,100,50,20,10,5,2,1};

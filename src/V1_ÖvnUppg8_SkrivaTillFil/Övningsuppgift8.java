@@ -1,4 +1,4 @@
-package V1_ÖvnUppg7_SkrivaTillFil;
+package V1_ÖvnUppg8_SkrivaTillFil;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -8,9 +8,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-public class Övningsuppgift7 {
+public class Övningsuppgift8 {
 
-    public Övningsuppgift7 () {
+    public Övningsuppgift8 () {
         
         String firstLine;
         String secondLine;
@@ -59,6 +59,6 @@ public class Övningsuppgift7 {
     }
     
     public static void main(String[] args){
-        Övningsuppgift7 ö = new Övningsuppgift7();
+        Övningsuppgift8 ö = new Övningsuppgift8();
     }
 }
