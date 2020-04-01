@@ -13,6 +13,8 @@ public class PersonDemo {
         
         p.name = "Hej";
         System.out.println(p.getName());
+        
+        p.age = 20;
     }
 
 }

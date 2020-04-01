@@ -8,8 +8,6 @@ public class ScannerDemo {
     ScannerDemo(){
         Scanner sc = new Scanner(System.in);
         int kostnad = 0;
-        int betalning = 0;
-        int växel = 0;
         
         System.out.println("Skriv din kostnad: ");
         

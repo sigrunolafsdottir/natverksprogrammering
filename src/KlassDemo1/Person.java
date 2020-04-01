@@ -3,7 +3,7 @@ package KlassDemo1;
 public class Person {
     
     public String name;
-    private int age;
+    protected int age;
 
     Person (String name, int age){
         this.name = name;

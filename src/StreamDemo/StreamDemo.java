@@ -16,11 +16,10 @@ public class StreamDemo {
                 (new FileReader ("src\\StreamDemo\\Luka.txt"));
             
          //   med BufferedReader kan vi läsa en rad i taget
-            
-            while(tempLine != null){
-                tempLine = bufIn.readLine();
-                System.out.println(tempLine);
-            }
+//            while(tempLine != null){
+//                tempLine = bufIn.readLine();
+//                System.out.println(tempLine);
+//            }
             
        //     vi slipper null på slutet
 //            while((tempLine = bufIn.readLine()) != null){

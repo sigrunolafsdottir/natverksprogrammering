@@ -16,7 +16,5 @@ public abstract class Person {
         name = newName;
     }
     
-//    public void printMe(){
-//        System.out.println("Jag är Person");
-//    }
+    public abstract void printMe();
 }
