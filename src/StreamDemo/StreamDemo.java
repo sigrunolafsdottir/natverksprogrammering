@@ -27,15 +27,15 @@ public class StreamDemo {
 //            }
             
             
-//            FileReader fileIn = new FileReader(
-//                    "src\\StreamDemo\\Luka.txt");
-//            
-//            while(tempInt != -1){
-//                tempInt = fileIn.read();
-//               // System.out.println(tempInt);
-//               // Vi måste casta intarna till char
-//                System.out.println((char)tempInt);
-//            }
+            FileReader fileIn = new FileReader(
+                    "src\\StreamDemo\\Luka.txt");
+            
+            while(tempInt != -1){
+                tempInt = fileIn.read();
+               // System.out.println(tempInt);
+               // Vi måste casta intarna till char
+                System.out.print((char)tempInt);
+            }
         }
         catch (Exception e){
             System.out.println("Could not read from file");
