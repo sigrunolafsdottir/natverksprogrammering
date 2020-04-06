@@ -10,8 +10,9 @@ import javax.swing.JPanel;
 
 public class ButtonDemo extends JFrame implements ActionListener{
     
-    JLabel label = new JLabel("Hej");
+    
     JButton button = new JButton("Tryck här");
+    JLabel label = new JLabel("Hej");
     
     ButtonDemo(){
         JPanel p = new JPanel();
