@@ -25,18 +25,18 @@ public class CarClientObject {
           
         ObjectOutputStream oos = new ObjectOutputStream(addressSocket.getOutputStream());
         ObjectInputStream ois = new ObjectInputStream(addressSocket.getInputStream())
-       // ObjectWriter out = new ObjectWriter(addressSocket.getOutputStream(), true);
-       // BufferedReader in = new BufferedReader(
-       //     new InputStreamReader(addressSocket.getInputStream()));
     )
     {
-        String fromServer;
+        Car fromServer;
         String fromUser;
         BufferedReader stdIn =
                 new BufferedReader(new InputStreamReader(System.in));
             
-        while ((fromServer = (String)ois.readObject()) != null) {
+       // while ((fromServer = (String)ois.readObject()) != null) {
+       while ((fromServer = (Car)ois.readObject()) != null) {
             System.out.println("Server: " + fromServer);
+            
+            
             
             fromUser = stdIn.readLine();
             if (fromUser != null) {

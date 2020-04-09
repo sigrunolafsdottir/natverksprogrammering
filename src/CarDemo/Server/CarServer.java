@@ -18,6 +18,7 @@ public class CarServer {
 
         try ( 
             ServerSocket serverSocket = new ServerSocket(portNumber);
+            
             Socket clientSocket = serverSocket.accept();
             PrintWriter out =
                 new PrintWriter(clientSocket.getOutputStream(), true);
