@@ -1,4 +1,4 @@
-package V1_ÖvnUppg2_ArvInterface;
+package V1_ÖvnUppg3_ArvInterface;
 
 
 public interface IHjulburen {

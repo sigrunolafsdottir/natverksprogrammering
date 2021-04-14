@@ -1,4 +1,4 @@
-package V1_ÖvnUppg7_SkrivaTillFil;
+package V1_ÖvnUppg8_SkrivaTillFil;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -6,31 +6,38 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
-public class Övningsuppgift7 {
+public class Övningsuppgift8_original {
 
-    public Övningsuppgift7 () {
+    public Övningsuppgift8_original () {
         
         String firstLine;
         String secondLine;
-        Path inFilePath= Paths.get("src\\V1_ÖvnUppg7_SkrivaTillFil\\Personuppgifter.txt");
-        Path outFilePath = Paths.get("src\\V1_ÖvnUppg7_SkrivaTillFil\\TallPeopleInformation.txt");
+        Path inFilePath= Paths.get("src\\V1_ÖvnUppg8_SkrivaTillFil\\Personuppgifter.txt");
+        Path outFilePath = Paths.get("src\\V1_ÖvnUppg8_SkrivaTillFil\\TallPeopleInformation.txt");
         
         String[] personDataParts;
+
         
         //Try with resources, gamla sättet
         //try(PrintWriter w = new PrintWriter(new BufferedWriter(
         //        new FileWriter(outFilePathString)))){
                
         //Try with resources, nya sättet med Paths och Files
-        try(PrintWriter w = new PrintWriter(Files.newBufferedWriter(outFilePath)))
+        try(PrintWriter w = new PrintWriter(Files.newBufferedWriter(outFilePath));
+              Scanner fileScanner = new Scanner(inFilePath);  )
             {
-
-            Scanner fileScanner = new Scanner(inFilePath);
             
             while(fileScanner.hasNext()){
+                Person tempPerson = new Person();
+                
                 firstLine = fileScanner.nextLine();
+                personDataParts = firstLine.split(",");
+               
+                
                 if (fileScanner.hasNext()){
                     secondLine = fileScanner.nextLine();
                     personDataParts = secondLine.split(",");
@@ -59,6 +66,6 @@ public class Övningsuppgift7 {
     }
     
     public static void main(String[] args){
-        Övningsuppgift7 ö = new Övningsuppgift7();
+        Övningsuppgift8_original ö = new Övningsuppgift8_original();
     }
 }

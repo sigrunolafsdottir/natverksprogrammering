@@ -35,6 +35,7 @@ public class MainClass {
         for( int i = 0; i < c.length; i++){
             c[i].aktivitet.start();
         }
+        
         Thread.sleep(15000);
         System.out.println("Antal kvar i kön "+ buf.size());
         buf.printQueue();

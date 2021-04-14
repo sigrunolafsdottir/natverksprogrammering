@@ -1,13 +1,13 @@
-package V1_ÖvnUppg4_Kalkylator;
+package V1_ÖvnUppg5_Kalkylator;
 
 import java.util.InputMismatchException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 
-public class Övningsuppgift4 {
+public class Övningsuppgift5 {
     
-    public Övningsuppgift4(){
+    public Övningsuppgift5(){
         Calculator calculator = new Calculator();
         double firstNumber;
         double secondNumber;
@@ -40,7 +40,7 @@ public class Övningsuppgift4 {
     }
     
     public static void main(String[] args){
-        Övningsuppgift4 ö = new Övningsuppgift4();
+        Övningsuppgift5 ö = new Övningsuppgift5();
         
     }
     

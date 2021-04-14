@@ -27,21 +27,20 @@ public class PathDemo {
         System.out.format("subpath(0,2): %s%n", path.subpath(0,2));
         System.out.format("getParent: %s%n", path.getParent());
         System.out.format("getRoot: %s%n", path.getRoot());
-          
-//        if (!Files.exists(path, NOFOLLOW_LINKS)){
+//          
+//      if (!Files.exists(path)){
 //            Files.createFile(path);
-//            BufferedWriter writer = 
-//              Files.newBufferedWriter(path, 
-//                      StandardCharsets.UTF_8);
+//            //BufferedWriter writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8);
+//            BufferedWriter writer = Files.newBufferedWriter(path);
 //            writer.write("nu skriver vi i vår fil");
 //            writer.flush();
 //        }
-        
+////        
 //       Path path2 = Paths.get("src\\PathDemo\\filnamn2");
-        
- //       Files.copy(path, path2, REPLACE_EXISTING );
-        
-     //   Files.delete(path2);
+////        
+//        Files.copy(path, path2, REPLACE_EXISTING );
+////        
+//        Files.delete(path2);
         
     }
 

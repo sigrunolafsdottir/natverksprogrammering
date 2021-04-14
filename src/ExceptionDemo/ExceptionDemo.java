@@ -5,18 +5,18 @@ public class ExceptionDemo {
         throw new TestException("TestException Occurred");  
     }  
 
-    void firstMethod(){  
-       // throw new TestException("TestException Occurred");
-       try{
-            secondmethod();
-       }
-       catch (TestException ae){
-           System.out.println("caught in firstMethod");
-       }
+    void firstMethod() throws TestException{ 
+        throw new TestException("TestException Occurred");
+//       try{
+//            secondmethod();
+//       }
+//       catch (TestException ae){
+//           System.out.println("caught in firstMethod");
+//       }
     }
     
     
-    public static void main (String args[])throws Exception{
+    public static void main (String args[]) throws Exception{
         ExceptionDemo obj=new ExceptionDemo(); 
        // try{
             obj.firstMethod(); 

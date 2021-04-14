@@ -13,6 +13,10 @@ public class Student extends Person implements IPartyAnimal{
         return "Popcorn";
     }
     
+    public String getTrams(){
+        return "trams";
+    }
+    
 //    @Override
 //    public String getFavouriteDrink() {
 //        return "Water";

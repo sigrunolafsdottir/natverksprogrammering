@@ -1,12 +1,12 @@
-package V1_ÖvnUppg6_Temperatur;
+package V1_ÖvnUppg7_Temperatur;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 
 
-public class Övningsuppgift6 {
-    public Övningsuppgift6 () {
+public class Övningsuppgift7 {
+    public Övningsuppgift7 () {
        // File file = new File("src\\ÖvnUppg6_Temperatur\\temp.txt");
         double temp;
         double tempSum = 0;
@@ -47,6 +47,6 @@ public class Övningsuppgift6 {
     }
     
     public static void main(String[] args){
-        Övningsuppgift6 ö = new Övningsuppgift6();
+        Övningsuppgift7 ö = new Övningsuppgift7();
     }
 }

@@ -25,13 +25,15 @@ public class MulticastSender {
     public MulticastSender() throws UnknownHostException, SocketException, IOException{
        // socket.joinGroup(iadr);
         System.out.println(prompt);
-        while((message = in.readLine()) != null){
+        //while((message = in.readLine()) != null){
+        while(true){
+            message = in.readLine();
             if (message.equals("bye"))  System.exit(0);
             data = message.getBytes();
             packet = new DatagramPacket(data, data.length, iadr, port);
             socket.send(packet);
             System.out.println(prompt);
-        } System.exit(0);
+        } //System.exit(0);
     }
     
     public static void main(String[] args) throws UnknownHostException, SocketException, IOException{

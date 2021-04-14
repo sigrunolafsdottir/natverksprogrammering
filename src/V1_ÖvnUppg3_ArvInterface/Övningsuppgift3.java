@@ -1,9 +1,9 @@
-package V1_ÖvnUppg2_ArvInterface;
+package V1_ÖvnUppg3_ArvInterface;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Övningsuppgift2 {
+public class Övningsuppgift3 {
     
     public void printFordon(Fordon fordon){
         fordon.printMe();
@@ -18,7 +18,7 @@ public class Övningsuppgift2 {
         System.out.println("Antal hjul "+hjulburen.getAntalHjul());
     }
     
-    Övningsuppgift2(){
+    Övningsuppgift3(){
         Tåg tåg = new Tåg(180, 300000, 5);
         Bil bil = new Bil(200, 1000, 70);
         Båt båt = new Båt(50, 300, 50);
@@ -60,7 +60,7 @@ public class Övningsuppgift2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Övningsuppgift2 övn2 = new Övningsuppgift2();
+        Övningsuppgift3 övn2 = new Övningsuppgift3();
     }
     
 }
