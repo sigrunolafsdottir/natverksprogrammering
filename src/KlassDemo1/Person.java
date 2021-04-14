@@ -2,7 +2,7 @@ package KlassDemo1;
 
 public class Person {
     
-    public String name;
+    private String name;
     private int age;
 
     Person (String name, int age){

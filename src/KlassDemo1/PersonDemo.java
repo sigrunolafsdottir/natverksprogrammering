@@ -7,12 +7,9 @@ public class PersonDemo {
         
         Person p = new Person ("Sigrun", 5);
         System.out.println(p.getName());
-        
-        p.setName("Bertil");
+        p.setName("Micke");
         System.out.println(p.getName());
-        
-        p.name = "Hej";
-        System.out.println(p.getName());
+
     }
 
 }

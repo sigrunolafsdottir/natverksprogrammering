@@ -15,11 +15,11 @@ public class StringDemo {
     }
 
     public static void main(String[] args) {
-        //Strings are immutable objects
+  /*      //Strings are immutable objects
         String s = "Hej";
         System.out.println("s before passing: " + s);
         Adder(s);
-        System.out.println("s after passing: " + s);
+        System.out.println("s after passing: " + s);   */
 
         //Passing an non-immutable object, containing a String
         Simpson s2 = new Simpson();
@@ -30,6 +30,6 @@ public class StringDemo {
     }
 
     static class Simpson {
-        String name = "Homer";
+        String name = "Homer Simpson";
     }
 }
