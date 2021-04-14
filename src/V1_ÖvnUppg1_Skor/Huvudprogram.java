@@ -36,6 +36,12 @@ public class Huvudprogram {
         skolista.get(indexToUpdate).setColor(newColor);
     }
 
+    public void listSko(){
+        for (Sko s : skolista){
+            s.print();
+        }
+    }
+
     public Huvudprogram(){
         Sko s1 = new Sko(37, "Svart", "Doc Martens");
         Sko s2 = new Sko(37, "Svart", "Ecco");
