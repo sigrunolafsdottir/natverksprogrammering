@@ -1,4 +1,4 @@
-package V1_ÖvnUppg3_ArvInterface;
+package V1_ÖvnUppg3_ArvInterface.Uppg3DEF;
 
 public class Cykel extends Fordon implements Printable, IHjulburen{
     private int antalVäxlar;

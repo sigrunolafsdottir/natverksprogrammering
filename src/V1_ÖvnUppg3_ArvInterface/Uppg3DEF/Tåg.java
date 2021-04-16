@@ -1,4 +1,4 @@
-package V1_ÖvnUppg3_ArvInterface;
+package V1_ÖvnUppg3_ArvInterface.Uppg3DEF;
 
 public class Tåg extends Fordon implements Printable{
     private int antalVagnar;
