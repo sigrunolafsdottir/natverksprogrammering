@@ -1,10 +1,7 @@
 package MulticastDemo;
 
 import java.io.IOException;
-import java.net.DatagramPacket;
-import java.net.InetAddress;
-import java.net.MulticastSocket;
-import java.net.SocketException;
+import java.net.*;
 import java.time.LocalDateTime;
 
 public class MulticastReceiver  {
@@ -13,8 +10,14 @@ public class MulticastReceiver  {
         int port = 20480;
         String ip = "239.0.1.2";
         InetAddress iadr = InetAddress.getByName(ip);
+
+        InetSocketAddress group = new InetSocketAddress(iadr, port);
+        NetworkInterface netIf = NetworkInterface.getByName("wlan1");
+
         MulticastSocket socket = new MulticastSocket(port);
-        socket.joinGroup(iadr);
+        socket.joinGroup(group, netIf);
+        //socket.joinGroup(iadr);  //deprecated
+
         byte[] data = new byte[256];
         while(true){
             DatagramPacket packet = new DatagramPacket(data, data.length);
