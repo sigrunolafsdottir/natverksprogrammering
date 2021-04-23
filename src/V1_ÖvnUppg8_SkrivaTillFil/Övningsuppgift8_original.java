@@ -21,10 +21,6 @@ public class Övningsuppgift8_original {
         
         String[] personDataParts;
 
-        
-        //Try with resources, gamla sättet
-        //try(PrintWriter w = new PrintWriter(new BufferedWriter(
-        //        new FileWriter(outFilePathString)))){
                
         //Try with resources, nya sättet med Paths och Files
         try(PrintWriter w = new PrintWriter(Files.newBufferedWriter(outFilePath));
@@ -32,11 +28,8 @@ public class Övningsuppgift8_original {
             {
             
             while(fileScanner.hasNext()){
-                Person tempPerson = new Person();
                 
                 firstLine = fileScanner.nextLine();
-                personDataParts = firstLine.split(",");
-               
                 
                 if (fileScanner.hasNext()){
                     secondLine = fileScanner.nextLine();

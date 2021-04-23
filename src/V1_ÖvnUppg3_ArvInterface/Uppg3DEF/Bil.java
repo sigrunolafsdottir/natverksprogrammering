@@ -10,7 +10,8 @@ public class Bil extends Fordon implements Printable, IHjulburen{
     }
     
     public void växla(){}
-    
+
+    @Override
     public void printMe(){
         System.out.println("Bil med hastighet " +getHastighet()+ " km/h, vikt " + getVikt() +" kg och motoreffekt: " + motoreffekt);
     }

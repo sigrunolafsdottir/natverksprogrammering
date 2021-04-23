@@ -44,11 +44,11 @@ import java.awt.*;
        läsInFil(namn.getText());    
      else if (e.getSource() == spara)  
        sparaFil(namn.getText());
-      else if (e.getSource() == skriv) 
+     else if (e.getSource() == skriv)
        try {
            area.print();  // skriver ut texten, kan ge exception
        }
-       catch (Exception ex) {}
+       catch (Exception ex) {ex.printStackTrace();}
      else if (e.getSource() == sluta) 
        System.exit(0);      
     } 

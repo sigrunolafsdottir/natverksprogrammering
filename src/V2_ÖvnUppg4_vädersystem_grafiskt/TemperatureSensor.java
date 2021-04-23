@@ -55,7 +55,7 @@ public class TemperatureSensor extends JFrame implements ActionListener {
         try{
             socket.send(packet);
         }
-        catch(Exception e){
+        catch(IOException e){
             e.printStackTrace();
         }
         text.setText("");

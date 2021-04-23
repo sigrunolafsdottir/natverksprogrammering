@@ -1,6 +1,8 @@
 package V1_ÖvnUppg3_ArvInterface.Uppg3BC;
 
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class Huvudprogram {
 
@@ -9,7 +11,7 @@ public class Huvudprogram {
     }
 
 
-    Huvudprogram(){
+    public Huvudprogram(){
         Tåg tåg = new Tåg(180, 300000, 5);
         Bil bil = new Bil(200, 1000, 70);
         Båt båt = new Båt(50, 300, 50);
@@ -23,8 +25,19 @@ public class Huvudprogram {
         printFordon(cykel);
 
         printFordon(f);
-        
 
+        System.out.println();
+        
+        List<Fordon> lista = new ArrayList<>();
+        lista.add(tåg);
+        lista.add(bil);
+        lista.add(båt);
+        lista.add(cykel);
+        lista.add(f);
+
+        for (Fordon ford : lista){
+            ford.printMe();
+        }
         
 
     }

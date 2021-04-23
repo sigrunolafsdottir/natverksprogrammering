@@ -22,7 +22,6 @@ public class Miniprogram {
                         StandardCharsets.UTF_8, 
                         StandardOpenOption.APPEND));){
             writer.println("Where you go, there you are.\n");
-            //writer.flush();
         }
         catch(IOException e){
             e.printStackTrace();

@@ -24,8 +24,8 @@ public class TemperatureCollector extends JFrame  {
         int minPort = 55555;
         DatagramSocket socket = new DatagramSocket(minPort);
         byte[] data = new byte[256];
+        DatagramPacket packet = new DatagramPacket(data, data.length);
         while(true){
-            DatagramPacket packet = new DatagramPacket(data, data.length);
             socket.receive(packet);
             String message = new String(packet.getData(), 0, packet.getLength());
             text.setText(text.getText()+" "+message+ "\n");

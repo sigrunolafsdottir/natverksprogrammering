@@ -17,8 +17,8 @@ public class Student extends Person implements IPartyAnimal{
         return "trams";
     }
     
-//    @Override
-//    public String getFavouriteDrink() {
-//        return "Water";
-//    }
+    @Override
+    public String getFavouriteDrink() {
+        return "Water";
+    }
 }

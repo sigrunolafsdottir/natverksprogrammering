@@ -17,7 +17,7 @@ public class Övningsuppgift8 {
         String firstLine;
         String secondLine;
         Path inFilePath= Paths.get("src\\V1_ÖvnUppg8_SkrivaTillFil\\Personuppgifter.txt");
-        Path outFilePath = Paths.get("src\\V1_ÖvnUppg8_SkrivaTillFil\\TallPeopleInformation.txt");
+        Path outFilePath = Paths.get("src\\V1_ÖvnUppg8_SkrivaTillFil\\TallPeopleInformationOLD.txt");
         
         String[] personDataParts1;
         String[] personDataParts2;

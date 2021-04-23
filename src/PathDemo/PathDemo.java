@@ -13,8 +13,7 @@ import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 
 public class PathDemo {
     
-    //Kräver filer som finns. 
-    //Ligger de i samma katalog måste de skrivas enligt src\\PathDemo\\filnamn
+
     
     public static void main(String[] arg) throws IOException {
         
@@ -27,21 +26,25 @@ public class PathDemo {
         System.out.format("subpath(0,2): %s%n", path.subpath(0,2));
         System.out.format("getParent: %s%n", path.getParent());
         System.out.format("getRoot: %s%n", path.getRoot());
-//          
-//      if (!Files.exists(path)){
-//            Files.createFile(path);
-//            //BufferedWriter writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8);
-//            BufferedWriter writer = Files.newBufferedWriter(path);
-//            writer.write("nu skriver vi i vår fil");
-//            writer.flush();
-//        }
-////        
-//       Path path2 = Paths.get("src\\PathDemo\\filnamn2");
-////        
-//        Files.copy(path, path2, REPLACE_EXISTING );
-////        
-//        Files.delete(path2);
-        
+
+      if (!Files.exists(path)) {
+          Files.createFile(path);
+      }
+
+      //BufferedWriter writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8);
+      BufferedWriter writer = Files.newBufferedWriter(path);
+      writer.write("nu skriver vi i vår fil");
+      writer.flush();
+
+
+      Path path2 = Paths.get("src\\PathDemo\\filnamn2");
+
+        Files.copy(path, path2, REPLACE_EXISTING );
+
+       // Files.delete(path2);
+
+        System.out.println(path2.toString());
+
     }
 
 }

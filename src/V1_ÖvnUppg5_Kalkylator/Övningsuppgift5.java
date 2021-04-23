@@ -36,6 +36,10 @@ public class Övningsuppgift5 {
                 //svar = "Ogiltig operator. " ;
                 svar += e.getMessage();
             }
+            catch (DivisionByZeroException e){
+                //svar = "Ogiltig operator. " ;
+                svar += e.getMessage();
+            }
         }
     }
     

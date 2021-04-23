@@ -13,7 +13,7 @@ public class ScannerDemoNoExceptions {
         
         boolean gettingKostnad = false;
         while (!gettingKostnad){
-            System.out.println("waiting");
+            //System.out.println("waiting");
                 if (sc.hasNextInt()){
                     kostnad = sc.nextInt();
                     gettingKostnad = true;

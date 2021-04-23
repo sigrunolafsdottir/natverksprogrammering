@@ -15,7 +15,7 @@ public class Övningsuppgift7 {
         double minTemp = Double.MAX_VALUE;
         String tempLine;
         try (BufferedReader reader = new BufferedReader(
-            new FileReader("src\\V1_ÖvnUppg6_Temperatur\\temp.txt"))) {
+            new FileReader("src\\V1_ÖvnUppg7_Temperatur\\temp.txt"))) {
             
             while((tempLine = reader.readLine()) != null){
                 

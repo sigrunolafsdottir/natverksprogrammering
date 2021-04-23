@@ -9,8 +9,15 @@ public class Calculator  {
         }
         return false;
     }
+
+    protected boolean checkDivisionByZero(double b){
+        if (b == 0){
+            return true;
+        }
+        return false;
+    }
     
-    public double calculate(double a, double b, String operator) throws OperatorNotSupportedException{
+    public double calculate(double a, double b, String operator) throws OperatorNotSupportedException, DivisionByZeroException{
         if (!operatorSupported(operator)) {
             throw new OperatorNotSupportedException("Felaktig operator");
         }
@@ -18,7 +25,12 @@ public class Calculator  {
         if (operator.equalsIgnoreCase("+")) return a+b;
         else if (operator.equalsIgnoreCase("-")) return a-b;
         else if (operator.equalsIgnoreCase("*")) return a*b;
-        else return a/b;
+        else {
+            if (checkDivisionByZero(b)){
+                throw new DivisionByZeroException("Inte ok att dela med noll");
+            }
+            return a/b;
+        }
     }
 
 }

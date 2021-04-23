@@ -9,10 +9,10 @@ import javax.swing.JPanel;
 
 public class JLabelDemo extends JFrame {
     JPanel panel = new JPanel();
-    JLabel label = new JLabel("Hej");
+    JLabel label = new JLabel("Hejfdsfsdfsfsds");
     
     JLabelDemo(){
-        setLayout(new FlowLayout());
+        //setLayout(new FlowLayout());
         add(panel);
         panel.add(label);
         pack();
