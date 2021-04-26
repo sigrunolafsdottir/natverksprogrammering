@@ -11,7 +11,6 @@ import java.util.*;
 
    public synchronized void put(QueueElement obj) {
      System.out.println("Putting "+ obj.getText());
-     int i;
      l.add(obj);
      notify();
      
