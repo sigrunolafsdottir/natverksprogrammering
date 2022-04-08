@@ -6,19 +6,19 @@ import java.util.List;
 
 public class Huvudprogram {
 
-    public void printFordon(Fordon fordon){
+    public void printFordon(Fordon fordon) {
         fordon.printMe();
     }
 
 
-    public Huvudprogram(){
+    public Huvudprogram() {
         Tåg tåg = new Tåg(180, 300000, 5);
         Bil bil = new Bil(200, 1000, 70);
         Båt båt = new Båt(50, 300, 50);
         Cykel cykel = new Cykel(20, 5, 10);
 
         Fordon f = new Cykel(15, 7, 3);
-        
+
         printFordon(bil);
         printFordon(båt);
         printFordon(tåg);
@@ -27,7 +27,7 @@ public class Huvudprogram {
         printFordon(f);
 
         System.out.println();
-        
+
         List<Fordon> lista = new ArrayList<>();
         lista.add(tåg);
         lista.add(bil);
@@ -35,10 +35,10 @@ public class Huvudprogram {
         lista.add(cykel);
         lista.add(f);
 
-        for (Fordon ford : lista){
+        for (Fordon ford : lista) {
             ford.printMe();
         }
-        
+
 
     }
 
@@ -48,5 +48,5 @@ public class Huvudprogram {
     public static void main(String[] args) {
         Huvudprogram övn2 = new Huvudprogram();
     }
-    
+
 }

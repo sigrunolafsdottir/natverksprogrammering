@@ -3,24 +3,24 @@ package demos.hospital;
 import java.util.List;
 
 public class AddressPrinter {
-    
-    public void printAddress(IAddressee a){
-           System.out.println(a.getName());
-           System.out.println(a.getAddress());
-           System.out.println();
+
+    public void printAddress(IAddressee a) {
+        System.out.println(a.getName());
+        System.out.println(a.getAddress());
+        System.out.println();
     }
-    
-    public AddressPrinter(){
-    
+
+    public AddressPrinter() {
+
         Backend backend = new Backend();
-        List <IAddressee> addressees = backend.getAllAdressees();
-        
-        for (IAddressee a : addressees){
+        List<IAddressee> addressees = backend.getAllAdressees();
+
+        for (IAddressee a : addressees) {
             printAddress(a);
         }
     }
-    
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         AddressPrinter addressPrinter = new AddressPrinter();
     }
 

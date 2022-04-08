@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class TemperatureSensor extends JFrame implements ActionListener {
-    
+
     JPanel panel = new JPanel();
     JTextField text = new JTextField(10);
     JButton button = new JButton("rapportera");
@@ -26,14 +26,14 @@ public class TemperatureSensor extends JFrame implements ActionListener {
     InetAddress toAdr = InetAddress.getLocalHost();
     int toPort = 55555;
     DatagramSocket socket = new DatagramSocket();
-    
-    public TemperatureSensor()throws UnknownHostException, SocketException, IOException, InterruptedException{
-        
+
+    public TemperatureSensor() throws UnknownHostException, SocketException, IOException, InterruptedException {
+
         city = JOptionPane.showInputDialog(null, "Ange stad");
-        if (city == null || city.length() == 0){  //tar hand om Cancel-tryck
-            System.exit(0); 
+        if (city == null || city.length() == 0) {  //tar hand om Cancel-tryck
+            System.exit(0);
         }
-        
+
         this.add(panel);
         panel.add(text);
         panel.add(button);
@@ -45,23 +45,22 @@ public class TemperatureSensor extends JFrame implements ActionListener {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent ae) {
         temperature = text.getText();
-        dataToSend = city+", "+temperature;
+        dataToSend = city + ", " + temperature;
         byte[] data = dataToSend.getBytes();
         DatagramPacket packet = new DatagramPacket(data, data.length, toAdr, toPort);
-        try{
+        try {
             socket.send(packet);
-        }
-        catch(IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
         text.setText("");
     }
-    
-    public static void main(String[] args) throws UnknownHostException, SocketException, IOException, InterruptedException{
+
+    public static void main(String[] args) throws UnknownHostException, SocketException, IOException, InterruptedException {
         TemperatureSensor ts = new TemperatureSensor();
     }
 

@@ -10,12 +10,12 @@ public class RiddleProtocol {
     private int state = WAITING;
     private int currentRiddle = 0;
 
-    private String[] clues = { "Vad är det som går och går men aldrig kommer till dörren?", 
-        "Vilken sten är alltid ihålig?", 
-        "Vilket öga kan inte se?"};
-    private String[] answers = { "Klockan",
-                                 "Skorstenen",
-                                 "Nålsögat" };
+    private String[] clues = {"Vad är det som går och går men aldrig kommer till dörren?",
+            "Vilken sten är alltid ihålig?",
+            "Vilket öga kan inte se?"};
+    private String[] answers = {"Klockan",
+            "Skorstenen",
+            "Nålsögat"};
 
     public String processInput(String theInput) {
         String theOutput = null;

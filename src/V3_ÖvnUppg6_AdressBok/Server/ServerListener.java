@@ -9,7 +9,7 @@ public class ServerListener {
 
     public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = new ServerSocket(12345);
-         while (true) {
+        while (true) {
             try {
                 final Socket socketToClient = serverSocket.accept();
                 MultiUserServer clientHandler = new MultiUserServer(socketToClient);

@@ -7,7 +7,7 @@ import java.util.Enumeration;
 
 public class ListNetworkInterface {
 
-    public ListNetworkInterface(){
+    public ListNetworkInterface() {
         try {
             String ip;
             Enumeration<NetworkInterface> interfaces = NetworkInterface.getNetworkInterfaces();
@@ -18,7 +18,7 @@ public class ListNetworkInterface {
                     continue;
 
                 Enumeration<InetAddress> addresses = iface.getInetAddresses();
-                while(addresses.hasMoreElements()) {
+                while (addresses.hasMoreElements()) {
                     InetAddress addr = addresses.nextElement();
                     ip = addr.getHostAddress();
                     System.out.println(iface.getDisplayName() + " " + ip);
@@ -30,7 +30,7 @@ public class ListNetworkInterface {
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         ListNetworkInterface i = new ListNetworkInterface();
     }
 }

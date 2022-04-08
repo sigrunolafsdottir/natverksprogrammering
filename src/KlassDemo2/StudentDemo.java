@@ -5,22 +5,22 @@ import java.util.List;
 
 
 public class StudentDemo {
-    
-    public static void main (String[] args){
-        
+
+    public static void main(String[] args) {
+
         //Person d = new Person ("Sigrun");
 
-        
-        Student s = new Student ("Sanna", "Nätverksprogrammering");
+
+        Student s = new Student("Sanna", "Nätverksprogrammering");
         System.out.println(s.getName());
         s.printMe();
 
-        Person p = new Student ("Pelle", "fdsfs");  //hur kan detta funka?
+        Person p = new Student("Pelle", "fdsfs");  //hur kan detta funka?
         System.out.println(p.getName());
         p.printMe();
 
         //Student x = new Person ("Xavier", "Systemintegration");  //varför funkar inte detta?
-        
+
 //        s.printMe();
 //        p.printMe();
 //        
@@ -28,7 +28,7 @@ public class StudentDemo {
         lista.add(s);
         lista.add(p);
 //        
-        for ( Person person : lista){
+        for (Person person : lista) {
             person.printMe();
         }
     }

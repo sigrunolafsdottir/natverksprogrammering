@@ -8,43 +8,41 @@ import java.net.Socket;
 
 
 public class Server {
-    
+
     DAO d = new DAO();
-    
-    public Server(){
+
+    public Server() {
         int portNumber = 12345;
 
-        try ( 
-            ServerSocket serverSocket = new ServerSocket(portNumber);
-            Socket clientSocket = serverSocket.accept();
-            PrintWriter out =
-                new PrintWriter(clientSocket.getOutputStream(), true);
-            BufferedReader in = new BufferedReader(
-                new InputStreamReader(clientSocket.getInputStream()));
+        try (
+                ServerSocket serverSocket = new ServerSocket(portNumber);
+                Socket clientSocket = serverSocket.accept();
+                PrintWriter out =
+                        new PrintWriter(clientSocket.getOutputStream(), true);
+                BufferedReader in = new BufferedReader(
+                        new InputStreamReader(clientSocket.getInputStream()));
         ) {
             String inputLine;
             String outputLine;
-            
+
             out.println("Vems adress behöver du få veta?");
-            
+
             while ((inputLine = in.readLine()) != null) {
-                
-                System.out.println("Getting message "+inputLine);
+
+                System.out.println("Getting message " + inputLine);
                 outputLine = d.getAddress(inputLine.trim());
-                if (outputLine == null){
+                if (outputLine == null) {
                     out.println("Denna person finns inte i databasen");
-                }
-                else{
+                } else {
                     out.println(outputLine);
                 }
             }
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Server s = new Server();
     }
 }

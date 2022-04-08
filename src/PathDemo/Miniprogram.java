@@ -11,19 +11,18 @@ import java.nio.file.StandardOpenOption;
 
 
 public class Miniprogram {
-    
-    public static void main  (String[] args){
-        
+
+    public static void main(String[] args) {
+
         Path path = Paths.get("src\\PathDemo\\citat");
         //Path altPath = Paths.get("src/PathDemo/citat");
 
-        try (PrintWriter writer = 
-                new PrintWriter(Files.newBufferedWriter(path, 
-                        StandardCharsets.UTF_8, 
-                        StandardOpenOption.APPEND));){
+        try (PrintWriter writer =
+                     new PrintWriter(Files.newBufferedWriter(path,
+                             StandardCharsets.UTF_8,
+                             StandardOpenOption.APPEND));) {
             writer.println("Where you go, there you are.\n");
-        }
-        catch(IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

@@ -1,10 +1,10 @@
 package InterfaceDemo;
 
 public interface IPartyAnimal {
-    
+
     public String getFavoriteSnack();
 
-    default String getFavouriteDrink(){
+    default String getFavouriteDrink() {
         return "Beer";
     }
 }

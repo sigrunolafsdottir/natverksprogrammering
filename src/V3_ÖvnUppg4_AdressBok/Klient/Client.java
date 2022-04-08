@@ -2,6 +2,7 @@ package V3_ÖvnUppg4_AdressBok.Klient;
 
 import V3_ÖvnUppg3_Adressbok.Server.Initiator;
 import V3_ÖvnUppg3_Adressbok.Server.Response;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
@@ -11,15 +12,15 @@ import java.net.Socket;
 
 public class Client {
 
-    Client() throws Exception{
+    Client() throws Exception {
         String hostName = "127.0.0.1";  //localhost
         int portNumber = 12345;
- 
-        try(
-        Socket addressSocket = new Socket(hostName, portNumber);
-        ObjectOutputStream oos = new ObjectOutputStream(addressSocket.getOutputStream());
-        ObjectInputStream ois = new ObjectInputStream(addressSocket.getInputStream());){
-        
+
+        try (
+                Socket addressSocket = new Socket(hostName, portNumber);
+                ObjectOutputStream oos = new ObjectOutputStream(addressSocket.getOutputStream());
+                ObjectInputStream ois = new ObjectInputStream(addressSocket.getInputStream());) {
+
             Object fromServer;
             String fromUser;
             BufferedReader stdIn =
@@ -27,15 +28,13 @@ public class Client {
 
             while ((fromServer = ois.readObject()) != null) {
 
-                if (fromServer instanceof Initiator){
+                if (fromServer instanceof Initiator) {
                     System.out.println("Connection setup complete");
                     System.out.println("What person would you like to look up?");
-                }
-                else if (fromServer instanceof Response){
-                    if (!((Response) fromServer).getSuccess()){
+                } else if (fromServer instanceof Response) {
+                    if (!((Response) fromServer).getSuccess()) {
                         System.out.println("Personen finns inte i databasen");
-                    }
-                    else{
+                    } else {
                         System.out.println(((Response) fromServer).getPerson().getAddress());
                     }
                 }
@@ -46,14 +45,13 @@ public class Client {
                     oos.writeObject(fromUser);
                 }
             }
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    
-    public static void main(String[] args) throws Exception{
+
+    public static void main(String[] args) throws Exception {
         Client c = new Client();
     }
-    
+
 }

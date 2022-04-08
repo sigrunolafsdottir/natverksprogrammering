@@ -1,7 +1,7 @@
 package ThreadDemo;
 
 public class ThreadDemo {
-    
+
     public static void main(String[] args) throws InterruptedException {
         //En skrivare skriver ut ett ord med ett visst antal sekunders mellanrum
         Skrivare s1 = new Skrivare("Winter", 1);

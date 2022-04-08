@@ -2,17 +2,18 @@ package V1_ÖvnUppg8_SkrivaTillFil;
 
 
 public class Person {
-    
+
     private String name;
     private String road;
     private String postalAddress;
     private int weight;
     private int height;
     private int age;
-    
-    public Person(){}
-    
-    public Person(String name, String road, String postalAddress, int age, int weight, int height ){
+
+    public Person() {
+    }
+
+    public Person(String name, String road, String postalAddress, int age, int weight, int height) {
         this.name = name;
         this.road = road;
         this.postalAddress = postalAddress;
@@ -68,7 +69,6 @@ public class Person {
     public void setAge(int age) {
         this.age = age;
     }
-    
-    
+
 
 }

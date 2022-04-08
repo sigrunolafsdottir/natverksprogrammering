@@ -8,14 +8,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class ButtonDemo extends JFrame implements ActionListener{
-    
-    
+public class ButtonDemo extends JFrame implements ActionListener {
+
+
     JButton button1 = new JButton("Tryck här");
     JButton button2 = new JButton("Eller tryck här");
     JLabel label = new JLabel("Hej");
-    
-    ButtonDemo(){
+
+    ButtonDemo() {
         JPanel p = new JPanel();
         p.setLayout(new FlowLayout());
         button1.addActionListener(this);
@@ -29,12 +29,11 @@ public class ButtonDemo extends JFrame implements ActionListener{
         this.setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
-    
-    public void actionPerformed(ActionEvent e){
-        if (e.getSource() == button1){
+
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == button1) {
             label.setText("kanpp 1");
-        }
-        else{
+        } else {
             label.setText("kanpp 2");
         }/*
         if (label.getText().equalsIgnoreCase("Hej")){
@@ -44,11 +43,10 @@ public class ButtonDemo extends JFrame implements ActionListener{
             label.setText("Hej");
         }*/
     }
-    
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         ButtonDemo g = new ButtonDemo();
     }
-    
-    
-    
+
+
 }

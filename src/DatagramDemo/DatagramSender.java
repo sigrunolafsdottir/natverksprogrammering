@@ -10,7 +10,7 @@ import java.net.SocketException;
 import java.net.UnknownHostException;
 
 public class DatagramSender {
-    
+
     BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
     InetAddress toAdr = InetAddress.getLocalHost();
     int toPort = 55555;
@@ -19,19 +19,20 @@ public class DatagramSender {
     byte[] data;
     String prompt = "Och vad har du på hjärtat? ";
     String message;
-    
-    public DatagramSender() throws UnknownHostException, SocketException, IOException{
+
+    public DatagramSender() throws UnknownHostException, SocketException, IOException {
         System.out.println(prompt);
-        while((message = in.readLine()) != null){
-            if (message.equals("bye"))  System.exit(0);
+        while ((message = in.readLine()) != null) {
+            if (message.equals("bye")) System.exit(0);
             data = message.getBytes();
             packet = new DatagramPacket(data, data.length, toAdr, toPort);
             socket.send(packet);
             System.out.println(prompt);
-        } System.exit(0);
+        }
+        System.exit(0);
     }
-    
-    public static void main(String[] args) throws UnknownHostException, SocketException, IOException{
+
+    public static void main(String[] args) throws UnknownHostException, SocketException, IOException {
         DatagramSender dgs = new DatagramSender();
     }
 }

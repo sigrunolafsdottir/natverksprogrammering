@@ -36,7 +36,7 @@ public class Sko {
         this.label = label;
     }
 
-    public void print(){
-        System.out.println("Storlek: "+ size+" Märke: "+label+" Färg: "+color);
+    public void print() {
+        System.out.println("Storlek: " + size + " Märke: " + label + " Färg: " + color);
     }
 }

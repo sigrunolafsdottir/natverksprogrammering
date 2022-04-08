@@ -4,35 +4,35 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 //only available backend
-public class Person implements Serializable{
-    
+public class Person implements Serializable {
+
     protected String name;
     String address;
     protected LocalDate dateOfBirth;
-    
-    public Person(String name, String address, LocalDate dateOfBirth){
+
+    public Person(String name, String address, LocalDate dateOfBirth) {
         this.name = name;
         this.address = address;
         this.dateOfBirth = dateOfBirth;
     }
-    
-    public String getName(){
+
+    public String getName() {
         return name;
     }
-    
-    public String getAddress(){
+
+    public String getAddress() {
         return address;
     }
-    
-    public void setAddress(String address){
+
+    public void setAddress(String address) {
         this.address = address;
     }
-    
-    public void setBirthday(int year, int month, int day){
-        dateOfBirth = LocalDate.of(year, month-1, day);
+
+    public void setBirthday(int year, int month, int day) {
+        dateOfBirth = LocalDate.of(year, month - 1, day);
     }
-    
-    public LocalDate getBirthday(){
+
+    public LocalDate getBirthday() {
         return dateOfBirth;
     }
 

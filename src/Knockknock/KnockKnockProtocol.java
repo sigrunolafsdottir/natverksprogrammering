@@ -30,7 +30,7 @@ package Knockknock;
  * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */ 
+ */
 
 import java.net.*;
 import java.io.*;
@@ -46,12 +46,12 @@ public class KnockKnockProtocol {
     private int state = WAITING;
     private int currentJoke = 0;
 
-    private String[] clues = { "Turnip", "Little Old Lady", "Atch", "Who", "Who" };
-    private String[] answers = { "Turnip the heat, it's cold in here!",
-                                 "I didn't know you could yodel!",
-                                 "Bless you!",
-                                 "Is there an owl in here?",
-                                 "Is there an echo in here?" };
+    private String[] clues = {"Turnip", "Little Old Lady", "Atch", "Who", "Who"};
+    private String[] answers = {"Turnip the heat, it's cold in here!",
+            "I didn't know you could yodel!",
+            "Bless you!",
+            "Is there an owl in here?",
+            "Is there an echo in here?"};
 
     public String processInput(String theInput) {
         String theOutput = null;
@@ -65,17 +65,17 @@ public class KnockKnockProtocol {
                 state = SENTCLUE;
             } else {
                 theOutput = "You're supposed to say \"Who's there?\"! " +
-			    "Try again. Knock! Knock!";
+                        "Try again. Knock! Knock!";
             }
         } else if (state == SENTCLUE) {
             if (theInput.equalsIgnoreCase(clues[currentJoke] + " who?")) {
                 theOutput = answers[currentJoke] + " Want another? (y/n)";
                 state = ANOTHER;
             } else {
-                theOutput = "You're supposed to say \"" + 
-			    clues[currentJoke] + 
-			    " who?\"" + 
-			    "! Try again. Knock! Knock!";
+                theOutput = "You're supposed to say \"" +
+                        clues[currentJoke] +
+                        " who?\"" +
+                        "! Try again. Knock! Knock!";
                 state = SENTKNOCKKNOCK;
             }
         } else if (state == ANOTHER) {

@@ -9,59 +9,60 @@ import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import CarDemo.Server.*;
 
+import CarDemo.Server.*;
 
 
 public class CarClientObject {
 
-    CarClientObject() throws IOException{
+    CarClientObject() throws IOException {
         String hostName = "127.0.0.1";  //localhost
         int portNumber = 12345;
 
 
-    try (
-        Socket addressSocket = new Socket(hostName, portNumber);
-          
-        ObjectOutputStream oos = new ObjectOutputStream(addressSocket.getOutputStream());
-        ObjectInputStream ois = new ObjectInputStream(addressSocket.getInputStream())
-    )
-    {
-        Car fromServer;
-        String fromUser;
-        BufferedReader stdIn =
-                new BufferedReader(new InputStreamReader(System.in));
-            
-       // while ((fromServer = (String)ois.readObject()) != null) {
-       while ((fromServer = (Car)ois.readObject()) != null) {
-            System.out.println("Server: " + fromServer);
-            
-            
-            
-            fromUser = stdIn.readLine();
-            if (fromUser != null) {
-                oos.writeObject(fromUser);
+        try (
+                Socket addressSocket = new Socket(hostName, portNumber);
+
+                ObjectOutputStream oos = new ObjectOutputStream(addressSocket.getOutputStream());
+                ObjectInputStream ois = new ObjectInputStream(addressSocket.getInputStream())
+        ) {
+            //Car fromServer;
+            String fromServer;
+            String fromUser;
+            BufferedReader stdIn =
+                    new BufferedReader(new InputStreamReader(System.in));
+
+            while ((fromServer = (String) ois.readObject()) != null) {
+                //while ((fromServer = (Car)ois.readObject()) != null) {
+                System.out.println("Server: " + fromServer);
+
+
+                fromUser = stdIn.readLine();
+                if (fromUser != null) {
+                    oos.writeObject(fromUser);
+                }
             }
-        }
-    }
-    catch (UnknownHostException e) {
+        } catch (UnknownHostException e) {
             System.err.println("Don't know about host " + hostName);
+            e.printStackTrace();
             System.exit(1);
-    } catch (IOException e) {
+        } catch (IOException e) {
             System.err.println("Couldn't get I/O for the connection to " +
-                hostName);
+                    hostName);
+            e.printStackTrace();
             System.exit(1);
-    } catch (Exception e) {
+        } catch (Exception e) {
             System.err.println("Unknown error occurred " +
-                hostName);
+                    hostName);
+            e.printStackTrace();
             System.exit(1);
-    }   
-        
+        }
+
     }
-    
-    public static void main(String[] args) throws IOException{
+
+    public static void main(String[] args) throws IOException {
         CarClientObject c = new CarClientObject();
     }
-    
+
 }
 

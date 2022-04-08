@@ -5,7 +5,7 @@ public class ThreadDemoInterface {
         Skrivare s1 = new Skrivare("Winter", 1);
         Skrivare s2 = new Skrivare("is", 2);
         Skrivare s3 = new Skrivare("coming", 3);
-        
+
         s1.aktivitet.start();
         s2.aktivitet.start();
         s3.aktivitet.start();
@@ -13,10 +13,9 @@ public class ThreadDemoInterface {
         s1.aktivitet.interrupt();
         s2.aktivitet.interrupt();
         s3.aktivitet.interrupt();
-        
-        //s1.aktivitet.join();
-        
 
-        
+        //s1.aktivitet.join();
+
+
     }
 }

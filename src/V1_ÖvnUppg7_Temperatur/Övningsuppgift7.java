@@ -6,8 +6,8 @@ import java.io.FileReader;
 
 
 public class Övningsuppgift7 {
-    public Övningsuppgift7 () {
-       // File file = new File("src\\ÖvnUppg6_Temperatur\\temp.txt");
+    public Övningsuppgift7() {
+        // File file = new File("src\\ÖvnUppg6_Temperatur\\temp.txt");
         double temp;
         double tempSum = 0;
         int amountOfDays = 0;
@@ -15,13 +15,13 @@ public class Övningsuppgift7 {
         double minTemp = Double.MAX_VALUE;
         String tempLine;
         try (BufferedReader reader = new BufferedReader(
-            new FileReader("src\\V1_ÖvnUppg7_Temperatur\\temp.txt"))) {
-            
-            while((tempLine = reader.readLine()) != null){
-                
+                new FileReader("src\\V1_ÖvnUppg7_Temperatur\\temp.txt"))) {
+
+            while ((tempLine = reader.readLine()) != null) {
+
                 //bort med End of Line-tecknet och eventuella blanktecken som kan gömma sig i filen
                 temp = Double.parseDouble(tempLine.trim());
-                
+
 
                 if (temp > maxTemp) {
                     maxTemp = temp;
@@ -32,21 +32,20 @@ public class Övningsuppgift7 {
                 amountOfDays++;
                 tempSum += temp;
             }
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Något gick fel");
             e.printStackTrace();
             System.out.flush();
             System.exit(0);
         }
-         
-        System.out.println("Maxtemp är "+maxTemp+"\n"
-                + "Mintemp är "+minTemp+
-                "\nMedelvärdet är "+tempSum/amountOfDays
-                +" (beräknat över "+amountOfDays+" dagar)");
+
+        System.out.println("Maxtemp är " + maxTemp + "\n"
+                + "Mintemp är " + minTemp +
+                "\nMedelvärdet är " + tempSum / amountOfDays
+                + " (beräknat över " + amountOfDays + " dagar)");
     }
-    
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Övningsuppgift7 ö = new Övningsuppgift7();
     }
 }

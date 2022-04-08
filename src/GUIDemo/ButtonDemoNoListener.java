@@ -13,7 +13,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class ButtonDemoNoListener extends JFrame {
-    
+
     JLabel label = new JLabel("Hej");
     JPanel p = new JPanel();
     JPanel panel2 = new JPanel();
@@ -24,15 +24,14 @@ public class ButtonDemoNoListener extends JFrame {
     JButton button4 = new JButton("Tryck här4");
     JTextField text = new JTextField(30);
     JTextArea area = new JTextArea(20, 100);
-    
-    
-    
-    ButtonDemoNoListener(){
+
+
+    ButtonDemoNoListener() {
         //p.setLayout(new GridLayout(5,5));
         this.setLayout(new BorderLayout());
         this.add(panel2, BorderLayout.NORTH);
         panel2.setLayout(new FlowLayout());
-        
+
         p.setLayout(new BorderLayout());
         this.add(p, BorderLayout.CENTER);
         panel2.add(label);
@@ -42,18 +41,17 @@ public class ButtonDemoNoListener extends JFrame {
         p.add(button2, BorderLayout.CENTER);
         p.add(button3, BorderLayout.EAST);
         p.add(button4, BorderLayout.SOUTH);
-        
+
         //this.setSize(500, 500);
         this.pack();
         this.setLocation(1000, 500);
         this.setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
-    
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         ButtonDemoNoListener g = new ButtonDemoNoListener();
     }
-    
-    
-    
+
+
 }
