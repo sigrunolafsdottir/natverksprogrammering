@@ -38,4 +38,13 @@ public class Database {
         return null;
     }
 
+    public Car getCarObject(String s) {
+        for (Car c : allCars) {
+            if (c.getRegNr().equalsIgnoreCase(s)) {
+                return c;
+            }
+        }
+        return null;
+    }
+
 }

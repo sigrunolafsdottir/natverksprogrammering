@@ -22,15 +22,17 @@ public class CarServerObject {
         ) {
             String inputLine;
             String outputLine;
+            Car tempcar;
 
             oos.writeObject("Vilken bil vill du slå upp?");
 
             while ((inputLine = (String) ois.readObject()) != null) {
-                outputLine = d.getCarData(inputLine.trim());
-                if (outputLine == null) {
+                //outputLine = d.getCarData(inputLine.trim());
+                tempcar = d.getCarObject(inputLine.trim());
+                if (tempcar == null) {
                     oos.writeObject("Denna bil finns inte i databasen");
                 } else {
-                    oos.writeObject(outputLine);
+                    oos.writeObject(tempcar);
                 }
             }
         } catch (Exception e) {

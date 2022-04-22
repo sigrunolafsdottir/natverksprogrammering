@@ -29,10 +29,27 @@ public class CarClientObject {
             //Car fromServer;
             String fromServer;
             String fromUser;
+            Object objFromServer;
             BufferedReader stdIn =
                     new BufferedReader(new InputStreamReader(System.in));
 
-            while ((fromServer = (String) ois.readObject()) != null) {
+            while ((objFromServer = ois.readObject()) != null) {
+
+                if (objFromServer instanceof Car){
+                    System.out.println("Server: " + ((Car)objFromServer).getData());
+                }
+                if (objFromServer instanceof String){
+                    System.out.println("Server: " + objFromServer);
+                }
+
+                fromUser = stdIn.readLine();
+                if (fromUser != null) {
+                    oos.writeObject(fromUser);
+                }
+            }
+
+
+       /*     while ((fromServer = (String) ois.readObject()) != null) {
                 //while ((fromServer = (Car)ois.readObject()) != null) {
                 System.out.println("Server: " + fromServer);
 
@@ -41,7 +58,7 @@ public class CarClientObject {
                 if (fromUser != null) {
                     oos.writeObject(fromUser);
                 }
-            }
+            }   */
         } catch (UnknownHostException e) {
             System.err.println("Don't know about host " + hostName);
             e.printStackTrace();
