@@ -10,13 +10,12 @@ import javax.swing.JPanel;
 
 public class ButtonDemo extends JFrame implements ActionListener {
 
-
+    JPanel p = new JPanel();
     JButton button1 = new JButton("Tryck här");
     JButton button2 = new JButton("Eller tryck här");
     JLabel label = new JLabel("Hej");
 
     ButtonDemo() {
-        JPanel p = new JPanel();
         p.setLayout(new FlowLayout());
         button1.addActionListener(this);
         button2.addActionListener(this);
@@ -33,15 +32,10 @@ public class ButtonDemo extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == button1) {
             label.setText("kanpp 1");
+
         } else {
             label.setText("kanpp 2");
-        }/*
-        if (label.getText().equalsIgnoreCase("Hej")){
-            label.setText("Hopp");
         }
-        else{
-            label.setText("Hej");
-        }*/
     }
 
     public static void main(String[] args) {

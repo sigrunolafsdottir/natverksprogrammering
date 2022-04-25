@@ -33,7 +33,7 @@ public class TemperatureSensor extends JFrame implements ActionListener {
         if (city == null || city.length() == 0) {  //tar hand om Cancel-tryck
             System.exit(0);
         }
-
+        this.setTitle(city);
         this.add(panel);
         panel.add(text);
         panel.add(button);

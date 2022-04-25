@@ -31,10 +31,8 @@ public class Övningsuppgift5 {
             } catch (NoSuchElementException e) {
                 svar = "Kunde inte läsa indata. ";
             } catch (OperatorNotSupportedException e) {
-                //svar = "Ogiltig operator. " ;
                 svar += e.getMessage();
             } catch (DivisionByZeroException e) {
-                //svar = "Ogiltig operator. " ;
                 svar += e.getMessage();
             }
         }

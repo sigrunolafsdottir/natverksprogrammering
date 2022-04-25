@@ -9,7 +9,7 @@ class InetAddressDemo {
     public static void main(String args[]) throws UnknownHostException, UnsupportedEncodingException {
         //Mitt eget IP 
         InetAddress Address = InetAddress.getLocalHost();
-        InetAddress Address2 = InetAddress.getByName("172.20.200.244");
+        //InetAddress Address2 = InetAddress.getByName("172.20.200.244");
 
         System.out.println(Address);
         System.out.println(Address.getHostAddress());

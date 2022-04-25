@@ -2,10 +2,7 @@ package V2_ÖvnUppg5_multiVäder;
 
 
 import java.io.IOException;
-import java.net.DatagramPacket;
-import java.net.InetAddress;
-import java.net.MulticastSocket;
-import java.net.SocketException;
+import java.net.*;
 
 public class TemperatureCollector {
 
@@ -13,8 +10,13 @@ public class TemperatureCollector {
         String ip = "234.235.236.237";
         InetAddress iadr = InetAddress.getByName(ip);
         int port = 12540;
+
         MulticastSocket socket = new MulticastSocket(port);
-        socket.joinGroup(iadr);
+        InetSocketAddress group = new InetSocketAddress(iadr, port);
+        //got by running ListNetworkInterface-program, yours may be different
+        NetworkInterface netIf = NetworkInterface.getByName("wlan3");
+
+        socket.joinGroup(group, netIf);
         byte[] data = new byte[256];
         while (true) {
             DatagramPacket packet = new DatagramPacket(data, data.length);

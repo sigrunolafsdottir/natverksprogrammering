@@ -64,17 +64,20 @@ public class Bilhyra extends JFrame implements ActionListener {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
-    protected static double forbrukningPerMil(double amountOfGas, double antalKördaMil) {
+    protected static double forbrukningPerMil(double amountOfGas,
+                                              double antalKördaMil) {
         return amountOfGas / antalKördaMil;
     }
 
-    protected static double antalKördaMil(double currentMätarställning, double oldMätarställning) {
+    protected static double antalKördaMil(double currentMätarställning,
+                                          double oldMätarställning) {
         return currentMätarställning - oldMätarställning;
     }
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        if (ae.getSource() == mätarställningNu || ae.getSource() == mätarställningGammal
+        if (ae.getSource() == mätarställningNu
+                || ae.getSource() == mätarställningGammal
                 || ae.getSource() == förbrukadBensin) {
 
             //Using scanner for easy Double parsing

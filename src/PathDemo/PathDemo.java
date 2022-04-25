@@ -43,9 +43,10 @@ public class PathDemo {
 
         Files.copy(path, path2, REPLACE_EXISTING);
 
-        // Files.delete(path2);
+        Files.delete(path2);
 
         System.out.println(path2.toString());
+
 
     }
 

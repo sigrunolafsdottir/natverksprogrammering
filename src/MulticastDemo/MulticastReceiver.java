@@ -12,7 +12,7 @@ public class MulticastReceiver {
         InetAddress iadr = InetAddress.getByName(ip);
 
         InetSocketAddress group = new InetSocketAddress(iadr, port);
-        NetworkInterface netIf = NetworkInterface.getByName("wlan1");
+        NetworkInterface netIf = NetworkInterface.getByName("wlan3");
 
         MulticastSocket socket = new MulticastSocket(port);
         socket.joinGroup(group, netIf);

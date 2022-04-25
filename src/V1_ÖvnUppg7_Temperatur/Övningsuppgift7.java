@@ -7,7 +7,6 @@ import java.io.FileReader;
 
 public class Övningsuppgift7 {
     public Övningsuppgift7() {
-        // File file = new File("src\\ÖvnUppg6_Temperatur\\temp.txt");
         double temp;
         double tempSum = 0;
         int amountOfDays = 0;
@@ -22,7 +21,6 @@ public class Övningsuppgift7 {
                 //bort med End of Line-tecknet och eventuella blanktecken som kan gömma sig i filen
                 temp = Double.parseDouble(tempLine.trim());
 
-
                 if (temp > maxTemp) {
                     maxTemp = temp;
                 }
@@ -35,7 +33,6 @@ public class Övningsuppgift7 {
         } catch (Exception e) {
             System.out.println("Något gick fel");
             e.printStackTrace();
-            System.out.flush();
             System.exit(0);
         }
 
@@ -46,6 +43,7 @@ public class Övningsuppgift7 {
     }
 
     public static void main(String[] args) {
+
         Övningsuppgift7 ö = new Övningsuppgift7();
     }
 }

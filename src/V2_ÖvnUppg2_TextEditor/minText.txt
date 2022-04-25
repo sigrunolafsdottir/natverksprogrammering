@@ -1,6 +1,1 @@
-fsd
-fds
-fsd
-
-
-fds
+min text en har tre kanter, tre kanter har min text

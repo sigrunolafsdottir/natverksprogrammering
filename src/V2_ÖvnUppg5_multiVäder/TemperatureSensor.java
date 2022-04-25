@@ -24,7 +24,7 @@ public class TemperatureSensor {
 
         InetSocketAddress group = new InetSocketAddress(iadr, port);
         //got by running ListNetworkInterface-program, yours may be different
-        NetworkInterface netIf = NetworkInterface.getByName("wlan1");
+        NetworkInterface netIf = NetworkInterface.getByName("wlan3");
 
         Scanner sc = new Scanner(System.in);
         String city = JOptionPane.showInputDialog(null, "Ange stad");
@@ -33,9 +33,8 @@ public class TemperatureSensor {
         }
 
         MulticastSocket socket = new MulticastSocket();
-        //socket.joinGroup(iadr);  //deprecated
         socket.joinGroup(group, netIf);
-        //socket.joinGroup(group, null);  //works for me
+        //socket.joinGroup(group, null);  //works for me, if only one network interface
 
         while (sc.hasNext()) {
             temperature = sc.next();
