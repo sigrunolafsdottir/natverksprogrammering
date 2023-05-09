@@ -20,11 +20,11 @@ public class StringDemo {
         System.out.println("s after passing: " + s);
 
         //Passing an non-immutable object, containing a String
-/*        Simpson s2 = new Simpson();
+        Simpson s2 = new Simpson();
         System.out.println("s2 before passing: " + s2.name);
         Adder(s2);
         System.out.println("s2 after passing: " + s2.name);
-*/
+
     }
 
     static class Simpson {

@@ -9,17 +9,19 @@ public class ListDemo {
 
     public static void main(String[] args) {
 
-        List<String> l = new LinkedList<>();
+        //Skapar en lista som inte går att ändra i efterhand
+        List<String> l = List.of("Toker", "Blyger", "Prosit", "Trötter");
+
+        //Om listan ska kunna ändras i efterhand
+        List<String> l2 = new LinkedList<>();
+        l2.add("Snövit");
+        l2.add("Törnrosa");
+        l2.add("Lilla sjöjungfrun");
+        l2.add("Rödluvan");
 
         System.out.println("Size of List " + l.size());
 
         System.out.println();
-
-        l.add("Toker");
-        l.add("Blyger");
-        l.add("Prosit");
-        l.add("Trötter");
-
 
         for (String s : l){
             System.out.println(s);
