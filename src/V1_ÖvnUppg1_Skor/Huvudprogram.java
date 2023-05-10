@@ -15,7 +15,8 @@ public class Huvudprogram {
     public void removeSko(int size, String color, String label) {
         int indexToRemove = -1;
         for (int i = 0; i < skolista.size(); i++) {
-            if (skolista.get(i).getColor().equalsIgnoreCase(color) && skolista.get(i).getLabel().equalsIgnoreCase(label)
+            if (skolista.get(i).getColor().equalsIgnoreCase(color)
+                    && skolista.get(i).getLabel().equalsIgnoreCase(label)
                     && skolista.get(i).getSize() == size) {
                 indexToRemove = i;
             }
@@ -25,10 +26,17 @@ public class Huvudprogram {
         }
     }
 
+    //lite problematiskt, risk för NullPointerException, men kort och koncis funktion
+    public void updateColor(int index, String newColor) {
+        skolista.get(index).setColor(newColor);
+    }
+
+    //om jag inte har koll på index i listan
     public void updateColor(int size, String oldColor, String label, String newColor) {
         int indexToUpdate = -1;
         for (int i = 0; i < skolista.size(); i++) {
-            if (skolista.get(i).getColor().equalsIgnoreCase(oldColor) && skolista.get(i).getLabel().equalsIgnoreCase(label)
+            if (skolista.get(i).getColor().equalsIgnoreCase(oldColor)
+                    && skolista.get(i).getLabel().equalsIgnoreCase(label)
                     && skolista.get(i).getSize() == size) {
                 indexToUpdate = i;
             }
@@ -54,6 +62,28 @@ public class Huvudprogram {
         for (Sko s : skolista) {
             s.print();
         }
+        System.out.println();
+
+        addSko(37, "gul", "stövlar");
+
+        for (Sko s : skolista) {
+            s.print();
+        }
+        System.out.println();
+
+        updateColor(37, "gul", "stövlar", "orange");
+
+        for (Sko s : skolista) {
+            s.print();
+        }
+        System.out.println();
+
+        removeSko(37, "orange", "stövlar");
+
+        for (Sko s : skolista) {
+            s.print();
+        }
+        System.out.println();
     }
 
     public static void main(String[] args) {

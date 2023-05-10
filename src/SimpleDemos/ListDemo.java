@@ -1,18 +1,18 @@
 package SimpleDemos;
 
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 
 public class ListDemo {
 
+
     public static void main(String[] args) {
 
-        //Skapar en lista som inte går att ändra i efterhand
         List<String> l = List.of("Toker", "Blyger", "Prosit", "Trötter");
 
-        //Om listan ska kunna ändras i efterhand
         List<String> l2 = new LinkedList<>();
         l2.add("Snövit");
         l2.add("Törnrosa");
@@ -44,6 +44,20 @@ public class ListDemo {
          System.out.println();
 
         l.forEach(i -> System.out.println(i));
+
+        class Simpson {
+            String name = "Homer Simpson";
+        }
+
+        //List<int> simpsons = new ArrayList<>();
+
+        List<Simpson> simpsons = new ArrayList<>();
+        simpsons.add(new Simpson());
+        simpsons.add(new Simpson());
+
+        System.out.println(simpsons);
+
+        simpsons.forEach(i -> System.out.println(i.name));
 
     }
 }

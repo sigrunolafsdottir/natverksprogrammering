@@ -36,6 +36,15 @@ public class Sko {
         this.label = label;
     }
 
+    @Override
+    public String toString() {
+        return "Sko{" +
+                "size=" + size +
+                ", color='" + color + '\'' +
+                ", label='" + label + '\'' +
+                '}';
+    }
+
     public void print() {
         System.out.println("Storlek: " + size + " Märke: " + label + " Färg: " + color);
     }
