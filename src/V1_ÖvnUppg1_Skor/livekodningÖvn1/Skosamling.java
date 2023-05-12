@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Skosamling {
 
-    private List<Skor> minaSkor = new ArrayList<>();
+    private final List<Skor> minaSkor = new ArrayList<>();
 
     public void addToList(Skor s){
         minaSkor.add(s);

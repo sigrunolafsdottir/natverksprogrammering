@@ -12,15 +12,14 @@ public class ScannerDemoNoExceptions {
         System.out.println("Skriv din kostnad: ");
 
         boolean gettingKostnad = false;
+
         while (!gettingKostnad) {
-            //System.out.println("waiting");
             if (sc.hasNextInt()) {
                 kostnad = sc.nextInt();
                 gettingKostnad = true;
             } else if (sc.hasNext()) {
-                // else {
                 System.out.println("Felaktig kostnad, försök igen (else)");
-                sc.nextLine();
+                sc.nextLine();   //rensar bort felaktig inmatning
             }
         }
 

@@ -12,10 +12,10 @@ public class ScannerDemo2 {
 
         System.out.println("Skriv din kostnad: ");
 
-      //  try {
+        try {
             kostnad = sc.nextInt();
             System.out.println("Kostnad " + kostnad);
-    /*    }
+        }
         catch (InputMismatchException  e) {
             System.out.println("InputMismatchException");
             e.printStackTrace();
@@ -23,7 +23,9 @@ public class ScannerDemo2 {
         catch (Exception e) {
             System.out.println("Felaktig kostnad, försök igen (exception)");
             e.printStackTrace();
-        } */
+        }
+
+
     }
 
     public static void main(String[] args) {

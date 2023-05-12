@@ -19,10 +19,9 @@ public class Övningsuppgift4 {
         double antalKördaMil = currentMätarställning - oldMätarställning;
         double forbrukningPerMil = amountOfGas / antalKördaMil;
 
-        //String.format("%.2f",d)
-        System.out.println(String.format("Antal körda mil:  %.2f", antalKördaMil));
-        System.out.println(String.format("Antal liter bensin:  %.2f", amountOfGas));
-        System.out.println(String.format("Förbrukning per mil: %.2f", forbrukningPerMil));
+        System.out.println("Antal körda mil: " +antalKördaMil);
+        System.out.println("Antal liter bensin: " +amountOfGas);
+        System.out.println("Förbrukning per mil: "+  forbrukningPerMil);
     }
 
     public static void main(String[] args) {

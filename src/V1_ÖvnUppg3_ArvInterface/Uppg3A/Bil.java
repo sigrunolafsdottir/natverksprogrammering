@@ -9,6 +9,7 @@ public class Bil extends Fordon {
     public Bil(int hastighet, int vikt, int motoreffekt) {
         super(hastighet, vikt);
         this.motoreffekt = motoreffekt;
+
     }
 
     public void växla() {
