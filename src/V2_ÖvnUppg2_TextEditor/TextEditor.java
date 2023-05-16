@@ -5,10 +5,12 @@ import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
 
+//C:\Users\s_ola\Dropbox\Jobb\Nätverksprogrammering\kod\Natverksprogrammering_kopieratFrDocs\src\V2_ÖvnUppg2_TextEditor\example.txt
+//C:\Users\s_ola\Dropbox\Jobb\Nätverksprogrammering\kod\Natverksprogrammering_kopieratFrDocs\src\V2_ÖvnUppg2_TextEditor\minText.txt
 
 public class TextEditor extends JFrame implements ActionListener {
-    private JPanel p = new JPanel();
-    private JTextField namn = new JTextField();
+    private JPanel buttonPanel= new JPanel();
+    private JTextField namn = new JTextField(20);
     private JButton öppna = new JButton("Öppna");
     private JButton spara = new JButton("Spara");
     private JButton skriv = new JButton("Skriv ut");
@@ -19,21 +21,23 @@ public class TextEditor extends JFrame implements ActionListener {
             JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 
     public TextEditor() {
+        setLayout(new BorderLayout());
         area.setFont(new Font("Monospaced", Font.PLAIN, 12));
-        p.setLayout(new GridLayout(1, 6));
-        p.add(new JLabel("Filnamn: ", JLabel.RIGHT));
-        p.add(namn);
-        p.add(öppna);
-        p.add(spara);
-        p.add(skriv);
-        p.add(sluta);
+        //buttonPanel.setLayout(new GridLayout(1, 6));
+        buttonPanel.setLayout(new FlowLayout());
+        buttonPanel.add(new JLabel("Filnamn: "));
+        buttonPanel.add(namn);
+        buttonPanel.add(öppna);
+        buttonPanel.add(spara);
+        buttonPanel.add(skriv);
+        buttonPanel.add(sluta);
         namn.addActionListener(this);
         öppna.addActionListener(this);
         spara.addActionListener(this);
         skriv.addActionListener(this);
         sluta.addActionListener(this);
         // placera ut panelen och textarean
-        add(p, BorderLayout.NORTH);
+        add(buttonPanel, BorderLayout.NORTH);
         add(sp, BorderLayout.CENTER);
         pack();
         setVisible(true);
@@ -70,6 +74,8 @@ public class TextEditor extends JFrame implements ActionListener {
         try {
             FileWriter w = new FileWriter(filnamn);
             area.write(w);
+            JOptionPane.showMessageDialog(null, "Data sparades");
+
         } catch (IOException e) {
             e.printStackTrace();
         }

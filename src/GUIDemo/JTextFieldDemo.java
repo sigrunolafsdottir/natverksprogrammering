@@ -32,6 +32,7 @@ public class JTextFieldDemo extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         System.out.println(tf.getText());
+        tf.setText("");
     }
 
     public static void main(String[] args) {
