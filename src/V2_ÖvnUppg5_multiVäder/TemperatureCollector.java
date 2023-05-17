@@ -6,7 +6,7 @@ import java.net.*;
 
 public class TemperatureCollector {
 
-    public static void main(String[] args) throws SocketException, IOException {
+    TemperatureCollector() throws  IOException {
         String ip = "234.235.236.237";
         InetAddress iadr = InetAddress.getByName(ip);
         int port = 12540;
@@ -24,5 +24,9 @@ public class TemperatureCollector {
             String message = new String(packet.getData(), 0, packet.getLength());
             System.out.println(message);
         }
+    }
+
+    public static void main(String[] args) throws  IOException {
+        TemperatureCollector tc = new TemperatureCollector();
     }
 }

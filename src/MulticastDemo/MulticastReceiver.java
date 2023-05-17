@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 
 public class MulticastReceiver {
 
-    public static void main(String[] args) throws SocketException, IOException {
+    public static void main(String[] args) throws IOException {
         int port = 20480;
         String ip = "239.0.1.2";
         InetAddress iadr = InetAddress.getByName(ip);

@@ -2,6 +2,7 @@ package ThreadDemoInterface;
 
 
 public class Skrivare implements Runnable {
+
     public Thread aktivitet = new Thread(this);
     private String text;
     private long interval;

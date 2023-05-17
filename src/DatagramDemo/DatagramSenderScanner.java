@@ -10,7 +10,8 @@ public class DatagramSenderScanner {
 
    // BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
     Scanner sc = new Scanner(System.in);
-    InetAddress toAdr = InetAddress.getLocalHost();
+    //InetAddress toAdr = InetAddress.getLocalHost();
+    InetAddress toAdr = InetAddress.getByName("172.20.200.118");
     int toPort = 55555;
     DatagramSocket socket = new DatagramSocket();
     DatagramPacket packet;

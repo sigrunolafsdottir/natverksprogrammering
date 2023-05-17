@@ -22,7 +22,7 @@ public class MulticastSender {
     String prompt = "Och vad har du på hjärtat? ";
     String message;
 
-    public MulticastSender() throws UnknownHostException, SocketException, IOException {
+    public MulticastSender() throws IOException {
         System.out.println(prompt);
         while (true) {
             message = in.readLine();

@@ -27,7 +27,7 @@ public class TemperatureSensor extends JFrame implements ActionListener {
     int toPort = 55555;
     DatagramSocket socket = new DatagramSocket();
 
-    public TemperatureSensor() throws UnknownHostException, SocketException, IOException, InterruptedException {
+    public TemperatureSensor() throws IOException {
 
         city = JOptionPane.showInputDialog(null, "Ange stad");
         if (city == null || city.length() == 0) {  //tar hand om Cancel-tryck
@@ -47,7 +47,7 @@ public class TemperatureSensor extends JFrame implements ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent ae) {
+    public void actionPerformed(ActionEvent ae)  {
         temperature = text.getText();
         dataToSend = city + ", " + temperature;
         byte[] data = dataToSend.getBytes();
@@ -55,12 +55,13 @@ public class TemperatureSensor extends JFrame implements ActionListener {
         try {
             socket.send(packet);
         } catch (IOException e) {
+            //System.out.println("Fel har inträffat");
             e.printStackTrace();
         }
         text.setText("");
     }
 
-    public static void main(String[] args) throws UnknownHostException, SocketException, IOException, InterruptedException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         TemperatureSensor ts = new TemperatureSensor();
     }
 
