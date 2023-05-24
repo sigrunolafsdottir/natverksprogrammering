@@ -54,17 +54,26 @@ public class Övningsuppgift8 {
         }
     }
 
+    public List<Person> filterHeight(int limit){
+        List<Person> temp = new ArrayList<>();
+        for (Person p : allPersonList){
+            if (p.getHeight() >= limit){
+                temp.add(p);
+            }
+        }
+        return temp;
+    }
+
     public Övningsuppgift8() throws IOException {
 
         createPersonList();
+        List<Person> filteredList = filterHeight(max);
 
         //Try with resources, nya sättet med Paths och Files
         try (PrintWriter w = new PrintWriter(Files.newBufferedWriter(outFilePath));){
 
-            for (Person p : allPersonList){
-                if (p.getHeight() >= max){
-                     w.println(p);
-                }
+            for (Person p : filteredList){
+                w.println(p);
             }
             w.flush();
 
