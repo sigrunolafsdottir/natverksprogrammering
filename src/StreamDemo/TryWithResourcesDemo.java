@@ -10,7 +10,7 @@ public class TryWithResourcesDemo {
         String tempLine;
         try (BufferedReader bufIn =
                      new BufferedReader(
-                             new FileReader("src\\StreamDemo\\Luka.txt"));) {
+                             new FileReader("src/StreamDemo/Luka.txt"));) {
 
             while ((tempLine = bufIn.readLine()) != null) {
                 System.out.println(tempLine);

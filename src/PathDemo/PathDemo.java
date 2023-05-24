@@ -29,13 +29,15 @@ public class PathDemo {
         System.out.format("getParent: %s%n", path.getParent());
         System.out.format("getRoot: %s%n", path.getRoot());
 
+
         if (!Files.exists(path)) {
             Files.createFile(path);
         }
 
         //BufferedWriter writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8);
         BufferedWriter writer = Files.newBufferedWriter(path);
-        writer.write("nu skriver vi i vår fil");
+        writer.write("nu skriver vi i vår fil");  //overwrites
+        writer.append("vi skriver mer");   //append
         writer.flush();
 
 
@@ -43,9 +45,9 @@ public class PathDemo {
 
         Files.copy(path, path2, REPLACE_EXISTING);
 
-        Files.delete(path2);
+        //Files.delete(path2);
 
-        System.out.println(path2.toString());
+      //  System.out.println(path2.toString());
 
 
     }

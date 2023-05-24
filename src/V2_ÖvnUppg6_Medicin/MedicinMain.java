@@ -10,8 +10,9 @@ public class MedicinMain {
         Scanner sc;
         double ggr = 0;
         boolean go = true;
+
         while (go) {
-            String medicin = JOptionPane.showInputDialog(null, "Titel");
+            String medicin = JOptionPane.showInputDialog(null, "Medicinens namn");
             if (medicin == null || medicin.length() == 0) {  //tar hand om Cancel-tryck
                 System.exit(0);
             }

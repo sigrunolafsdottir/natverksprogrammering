@@ -11,12 +11,14 @@ public class ThreadDemo {
         s1.start();
         s2.start();
         s3.start();
-
-     /*   s1.run();
+/*
+        s1.run();
         s2.run();
         s3.run();*/
 
-        Thread.sleep(10000);
+
+        Thread.sleep(5000);
+
         s1.interrupt();
         s2.interrupt();
         s3.interrupt();

@@ -11,6 +11,8 @@ public class Övningsuppgift7 {
         double tempSum = 0;
         int amountOfDays = 0;
         double maxTemp = -Double.MAX_VALUE;
+        System.out.println(Double.MAX_VALUE);
+        System.out.println(Double.MIN_VALUE);
         double minTemp = Double.MAX_VALUE;
         String tempLine;
         try (BufferedReader reader = new BufferedReader(

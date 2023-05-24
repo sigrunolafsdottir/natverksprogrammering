@@ -8,3 +8,13 @@ Micke Nilsson, Xvägen 4, 12345 Ystad
 31, 69, 167
 Nisse Nilsson, Xvägen 5, 12345 Ystad
 23, 80, 205
+Anna Andersson, Xvägen 6, 12345 Ystad
+25, 123, 189
+Berit Bengtsson, Xvägen 7, 12345 Ystad
+45, 87, 169
+Cecil Cellin, Xvägen 8, 12345 Ystad
+87, 135, 210
+Doris Day, Xvägen 9, 12345 Ystad
+67, 56, 163
+Elvis Presley, Xvägen 10, 12345 Ystad
+12, 104, 187

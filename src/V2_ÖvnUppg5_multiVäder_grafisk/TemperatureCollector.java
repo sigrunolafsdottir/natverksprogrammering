@@ -28,6 +28,7 @@ public class TemperatureCollector extends JFrame {
         NetworkInterface netIf = NetworkInterface.getByName("wlan3");
 
         socket.joinGroup(group, netIf);
+
         byte[] data = new byte[256];
         DatagramPacket packet = new DatagramPacket(data, data.length);
         while (true) {

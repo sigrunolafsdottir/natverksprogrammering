@@ -27,7 +27,6 @@ public class Övningsuppgift8_original {
              Scanner fileScanner = new Scanner(inFilePath);) {
 
             while (fileScanner.hasNext()) {
-
                 firstLine = fileScanner.nextLine();
 
                 if (fileScanner.hasNext()) {

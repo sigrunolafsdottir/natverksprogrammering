@@ -23,4 +23,6 @@ public class Skrivare implements Runnable {
         }
 
     }
+
+
 }
