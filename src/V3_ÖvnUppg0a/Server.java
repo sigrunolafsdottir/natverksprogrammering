@@ -8,6 +8,8 @@ import java.net.Socket;
 
 //Server getting messages from client and printing them
 
+//Client -> server
+
 public class Server {
 
     public Server() {

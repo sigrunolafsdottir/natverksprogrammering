@@ -34,12 +34,11 @@ public class CarClientObject {
                     new BufferedReader(new InputStreamReader(System.in));
 
             while ((objFromServer = ois.readObject()) != null) {
-
-                if (objFromServer instanceof Car){
-                    System.out.println("Server: " + ((Car)objFromServer).getData());
+                if (objFromServer instanceof Car c){
+                    System.out.println("Server: " + c.getData());
                 }
-                if (objFromServer instanceof String){
-                    System.out.println("Server: " + objFromServer);
+                if (objFromServer instanceof String s){
+                    System.out.println("Server: " + s);
                 }
 
                 fromUser = stdIn.readLine();

@@ -67,6 +67,7 @@ public class Övningsuppgift8 {
     public Övningsuppgift8() throws IOException {
 
         createPersonList();
+
         List<Person> filteredList = filterHeight(max);
 
         //Try with resources, nya sättet med Paths och Files

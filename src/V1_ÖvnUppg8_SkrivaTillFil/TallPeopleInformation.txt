@@ -1,2 +1,4 @@
 Nisse Nilsson, Xvägen 5, 12345 Ystad
 23, 80, 205
+Cecil Cellin, Xvägen 8, 12345 Ystad
+87, 135, 210

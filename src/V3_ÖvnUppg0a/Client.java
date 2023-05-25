@@ -9,7 +9,9 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 
-//Client getting messages from user and sending to server 
+//Client getting messages from user and sending to server
+
+//CLient -> server
 
 public class Client {
 

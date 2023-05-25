@@ -27,15 +27,13 @@ public class ObjectServer {
             Object inputLine;
             Person outputPerson;
 
-            //Fuling, vi gör såhär eftersom klienten bara tar emot Person
-            oos.writeObject(new Person(null, "Vems adress behöver du veta", null));
+            oos.writeObject("Vems adress behöver du veta");
 
             while ((inputLine = (String) ois.readObject()) != null) {
 
                 outputPerson = d.getPersonByName(((String) inputLine).trim());
                 if (outputPerson == null) {
-                    //String n = "Denna person finns inte i databasen";
-                    oos.writeObject(new Person("Null", "Denna person finns inte i databasen", LocalDate.of(1967, Month.SEPTEMBER, 27)));
+                    oos.writeObject("Denna person finns inte i databasen");
                 } else {
                     oos.writeObject(outputPerson);
                 }

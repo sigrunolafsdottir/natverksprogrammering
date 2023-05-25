@@ -20,15 +20,20 @@ public class ObjectClient {
                 ObjectOutputStream oos = new ObjectOutputStream(addressSocket.getOutputStream());
                 ObjectInputStream ois = new ObjectInputStream(addressSocket.getInputStream());) {
 
-            Person fromServer;
+            Object fromServer;
             String fromUser;
             BufferedReader stdIn =
                     new BufferedReader(new InputStreamReader(System.in));
 
 
-            while ((fromServer = (Person) ois.readObject()) != null) {
+            while ((fromServer = ois.readObject()) != null) {
 
-                System.out.println("Server: " + fromServer.getAddress());
+                if (fromServer instanceof Person p) {
+                    System.out.println("Server: " + p.getAddress());
+                }
+                else if (fromServer instanceof String s) {
+                    System.out.println("Server: " + s);
+                }
 
                 fromUser = stdIn.readLine();
                 if (fromUser != null) {

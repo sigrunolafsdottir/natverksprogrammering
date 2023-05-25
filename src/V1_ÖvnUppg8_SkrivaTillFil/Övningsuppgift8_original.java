@@ -21,7 +21,6 @@ public class Övningsuppgift8_original {
 
         String[] personDataParts;
 
-
         //Try with resources, nya sättet med Paths och Files
         try (PrintWriter w = new PrintWriter(Files.newBufferedWriter(outFilePath));
              Scanner fileScanner = new Scanner(inFilePath);) {

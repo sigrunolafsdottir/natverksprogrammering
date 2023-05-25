@@ -30,6 +30,7 @@ public class Database {
 
 
     public String getCarData(String s) {
+
         for (Car c : allCars) {
             if (c.getRegNr().equalsIgnoreCase(s)) {
                 return c.getData();
