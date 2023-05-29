@@ -21,13 +21,19 @@ public class RiddleProtocol {
         String theOutput = null;
 
         if (state == WAITING || state == SENTANSWER) {
-            theOutput = clues[currentRiddle];
-            state = SENTRIDDLE;
+            if (theInput == null || theInput.equalsIgnoreCase("ja")) {
+                theOutput = clues[currentRiddle];
+                state = SENTRIDDLE;
+            }
+            else{
+                theOutput = "Bye.";
+                state = SENTRIDDLE;
+            }
         } else if (state == SENTRIDDLE) {
             if (theInput.equalsIgnoreCase(answers[currentRiddle])) {
-                theOutput = "Rätt";
+                theOutput = "Rätt, vill du ha en till?";
             } else {
-                theOutput = "Fel";
+                theOutput = "Fel, vill du ha en till?";
             }
             state = SENTANSWER;
             currentRiddle++;
