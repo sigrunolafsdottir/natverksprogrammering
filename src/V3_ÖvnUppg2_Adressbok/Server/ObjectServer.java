@@ -29,8 +29,9 @@ public class ObjectServer {
 
             oos.writeObject("Vems adress behöver du veta");
 
-            while ((inputLine = (String) ois.readObject()) != null) {
-
+            while ((inputLine = ois.readObject()) != null) {
+                //vi kan casta direkt eftersom vi vet att klienten alltid skickar String
+                //om klienten skickar nåt annat kommer vi att få fel
                 outputPerson = d.getPersonByName(((String) inputLine).trim());
                 if (outputPerson == null) {
                     oos.writeObject("Denna person finns inte i databasen");

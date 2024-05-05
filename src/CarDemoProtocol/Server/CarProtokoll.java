@@ -19,6 +19,7 @@ public class CarProtokoll {
         if (state == BEFORE_INIT) {
             theOutput = "Vilken bil vill du slå upp?";
             state = WAITING_FOR_REQUEST;
+
         } else if (state == WAITING_FOR_REQUEST) {
             dbResponse = dao.getCarData(((String) theInput).trim());
             if (dbResponse == null) {

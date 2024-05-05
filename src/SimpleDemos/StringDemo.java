@@ -19,6 +19,7 @@ public class StringDemo {
         Adder(s);
         System.out.println("s after passing: " + s);
 
+        System.out.println();
         //Passing an non-immutable object, containing a String
         Simpson s2 = new Simpson();
         System.out.println("s2 before passing: " + s2.name);

@@ -35,9 +35,10 @@ public class CarClientObject {
 
             while ((objFromServer = ois.readObject()) != null) {
                 if (objFromServer instanceof Car c){
+                    //Car c = (Car)objFromServer;
                     System.out.println("Server: " + c.getData());
                 }
-                if (objFromServer instanceof String s){
+                else if (objFromServer instanceof String s){
                     System.out.println("Server: " + s);
                 }
 
