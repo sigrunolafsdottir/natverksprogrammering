@@ -22,6 +22,7 @@ public class ArrayDemo {
         int[] myArray2 = {1,2,3};
         myArray2[1]=10;
 
+
         for(int i: myArray2){
             System.out.println(i);
         }
