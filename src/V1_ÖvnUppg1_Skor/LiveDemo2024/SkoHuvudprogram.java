@@ -39,5 +39,6 @@ public class SkoHuvudprogram {
 
     public static void main(String[] args) {
         SkoHuvudprogram sh = new SkoHuvudprogram();
+       // sh.skosamling.addSko(new Sko(38, "rosa", "nike"));
     }
 }

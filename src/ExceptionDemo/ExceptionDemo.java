@@ -6,13 +6,13 @@ public class ExceptionDemo {
     }
 
     void firstMethod() throws TestException {
-         //throw new TestException("TestException Occurred in firstMethod");
-          //  try{
+        // throw new TestException("TestException Occurred in firstMethod");
+            try{
                 secondmethod();
-        /*    }
+            }
             catch (TestException ae){
                 System.out.println("caught in firstMethod");
-            }*/
+            }
     }
 
 
@@ -20,7 +20,7 @@ public class ExceptionDemo {
         ExceptionDemo obj = new ExceptionDemo();
      //   try{
             obj.firstMethod();
-            System.out.println("Stuff in try clause");
+            System.out.println("Stuff in main");
      /*   }
         catch (TestException ae){
             System.out.println("Fel inträffade, main catchade");

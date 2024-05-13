@@ -19,6 +19,9 @@ public class StudentDemo {
         System.out.println(p.getName());
         p.printMe();
 
+        Person p2 = new Lärare("Sigrun", "fdsfs");  //hur kan detta funka?
+        p2.printMe();
+
         //Student x = new Person ("Xavier", "Systemintegration");  //varför funkar inte detta?
 
 //        s.printMe();
@@ -27,6 +30,8 @@ public class StudentDemo {
         List<Person> lista = new ArrayList<>();
         lista.add(s);
         lista.add(p);
+        lista.add(p2);
+
 //        
         for (Person person : lista) {
             person.printMe();

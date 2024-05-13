@@ -2,10 +2,10 @@ package V1_ÖvnUppg3_ArvInterface.Uppg3A;
 
 public class Fordon {
 
-    private int hastighet;
+    protected int hastighet;
     private int vikt;
 
-    Fordon() {}
+    //Fordon() {}
 
     Fordon(int hastighet, int vikt) {
         this.hastighet = hastighet;

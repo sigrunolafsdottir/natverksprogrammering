@@ -10,6 +10,7 @@ public class Cykel extends Fordon {
     public Cykel(int hastighet, int vikt, int antalVäxlar) {
         super(hastighet, vikt);
         this.antalVäxlar = antalVäxlar;
+
     }
 
     public void trampa() {

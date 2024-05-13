@@ -17,4 +17,8 @@ public abstract class Person {
     }
 
     public abstract void printMe();
+
+    public void getInfo(){
+        System.out.println("Jag är en person");
+    }
 }

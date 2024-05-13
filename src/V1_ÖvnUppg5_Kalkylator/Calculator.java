@@ -20,7 +20,7 @@ public class Calculator {
     public double calculate(double a, double b, String operator)
             throws OperatorNotSupportedException, DivisionByZeroException {
         if (!operatorSupported(operator)) {
-            throw new OperatorNotSupportedException("Felaktig operator");
+            throw new OperatorNotSupportedException("Felaktig operator " + operator);
         }
 
         if (operator.equalsIgnoreCase("+")) return a + b;

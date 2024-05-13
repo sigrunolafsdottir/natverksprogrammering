@@ -4,7 +4,7 @@ import V1_ÖvnUppg3_ArvInterface.Uppg3A.Fordon;
 
 public class Bil extends Fordon {
     private int motoreffekt;
-    int antalHjul = 4;
+    private int antalHjul = 4;
 
     public Bil(int hastighet, int vikt, int motoreffekt) {
         super(hastighet, vikt);

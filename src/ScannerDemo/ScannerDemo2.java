@@ -18,13 +18,15 @@ public class ScannerDemo2 {
         }
         catch (InputMismatchException  e) {
             System.out.println("InputMismatchException");
-            e.printStackTrace();
+            throw e;
+           // e.printStackTrace();
         }
         catch (Exception e) {
             System.out.println("Felaktig kostnad, försök igen (exception)");
             e.printStackTrace();
         }
 
+        System.out.println("Slut på metod");
 
     }
 
