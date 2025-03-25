@@ -7,25 +7,26 @@ public class ExceptionDemo {
 
     void firstMethod() throws TestException {
         // throw new TestException("TestException Occurred in firstMethod");
-            try{
+        //    try{
                 secondmethod();
-            }
+        /*    }
             catch (TestException ae){
                 System.out.println("caught in firstMethod");
-            }
+            }*/
     }
 
 
     public static void main(String args[]) throws Exception {
         ExceptionDemo obj = new ExceptionDemo();
-     //   try{
+        try{
             obj.firstMethod();
             System.out.println("Stuff in main");
-     /*   }
+        }
         catch (TestException ae){
             System.out.println("Fel inträffade, main catchade");
+            System.out.println(ae.s);
             ae.printStackTrace();
-        }*/
+        }
 
     }
 }

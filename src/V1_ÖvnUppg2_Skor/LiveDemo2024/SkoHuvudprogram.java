@@ -1,6 +1,5 @@
-package V1_ÖvnUppg1_Skor.LiveDemo2024;
+package V1_ÖvnUppg2_Skor.LiveDemo2024;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class SkoHuvudprogram {

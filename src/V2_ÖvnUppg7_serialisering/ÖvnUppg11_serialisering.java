@@ -1,4 +1,4 @@
-package ÖvnUppg11_serialisering;
+package V2_ÖvnUppg7_serialisering;
 
 import java.util.ArrayList;
 import java.util.List;

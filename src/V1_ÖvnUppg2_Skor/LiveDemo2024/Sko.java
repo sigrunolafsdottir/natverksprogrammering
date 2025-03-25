@@ -1,4 +1,4 @@
-package V1_ÖvnUppg1_Skor;
+package V1_ÖvnUppg2_Skor.LiveDemo2024;
 
 public class Sko {
 
@@ -43,9 +43,5 @@ public class Sko {
                 ", color='" + color + '\'' +
                 ", label='" + label + '\'' +
                 '}';
-    }
-
-    public void print() {
-        System.out.println("Storlek: " + size + " Märke: " + label + " Färg: " + color);
     }
 }

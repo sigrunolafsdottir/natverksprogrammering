@@ -1,6 +1,4 @@
-package V1_ÖvnUppg1_Skor.ÖvnUppg1d;
-
-import V1_ÖvnUppg1_Skor.Sko;
+package V1_ÖvnUppg2_Skor.ÖvnUppg2d;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package V1_ÖvnUppg1_Skor.livekodningÖvn1;
+package V1_ÖvnUppg2_Skor.livekodning;
 
 public class Skor {
 

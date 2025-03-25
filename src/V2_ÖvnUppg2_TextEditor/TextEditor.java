@@ -5,8 +5,11 @@ import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
 
-//C:\Users\s_ola\Dropbox\Jobb\Nätverksprogrammering\kod\Natverksprogrammering_kopieratFrDocs\src\V2_ÖvnUppg2_TextEditor\example.txt
-//C:\Users\s_ola\Dropbox\Jobb\Nätverksprogrammering\kod\Natverksprogrammering_kopieratFrDocs\src\V2_ÖvnUppg2_TextEditor\minText.txt
+// src/V2_ÖvnUppg2_TextEditor/example.txt
+// src/V2_ÖvnUppg2_TextEditor/example2.txt
+// src/V2_ÖvnUppg2_TextEditor/example3.txt
+// src/V2_ÖvnUppg2_TextEditor/minText.txt
+
 
 public class TextEditor extends JFrame implements ActionListener {
     private JPanel buttonPanel= new JPanel();
@@ -62,8 +65,7 @@ public class TextEditor extends JFrame implements ActionListener {
     }
 
     private void läsInFil(String filnamn) {
-        try {
-            FileReader r = new FileReader(filnamn);
+        try (FileReader r = new FileReader(filnamn);){
             area.read(r, null);
         } catch (IOException e) {
             e.printStackTrace();
@@ -71,8 +73,7 @@ public class TextEditor extends JFrame implements ActionListener {
     }
 
     private void sparaFil(String filnamn) {
-        try {
-            FileWriter w = new FileWriter(filnamn);
+        try (FileWriter w = new FileWriter(filnamn)){
             area.write(w);
             JOptionPane.showMessageDialog(null, "Data sparades");
 

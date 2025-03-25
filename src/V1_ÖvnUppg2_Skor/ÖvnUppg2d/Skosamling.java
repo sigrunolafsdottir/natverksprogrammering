@@ -1,15 +1,36 @@
-package V1_ÖvnUppg1_Skor;
+package V1_ÖvnUppg2_Skor.ÖvnUppg2d;
+
+import V1_ÖvnUppg2_Skor.Sko;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Huvudprogram {
+public class Skosamling {
 
     List<Sko> skolista = new ArrayList<>();
+
+    public Skosamling(){
+        Sko s1 = new Sko(37, "Svart", "Doc Martens");
+        Sko s2 = new Sko(37, "Svart", "Ecco");
+        Sko s3 = new Sko(37, "Blå", "Nike");
+
+        skolista.add(s1);
+        skolista.add(s2);
+        skolista.add(s3);
+    }
+
+    public List<Sko> getSkoLista(){
+        return skolista;
+    }
 
     public void addSko(int size, String color, String label) {
         Sko nySko = new Sko(size, color, label);
         skolista.add(nySko);
+    }
+
+    //lite problematiskt, risk för NullPointerException, men kort och koncis funktion
+    public void removeSko(int index) {
+        skolista.remove(index);
     }
 
     public void removeSko(int size, String color, String label) {
@@ -44,53 +65,10 @@ public class Huvudprogram {
         skolista.get(indexToUpdate).setColor(newColor);
     }
 
-    public void listSko() {
-        for (Sko s : skolista) {
-            s.print();
+    public void listaAllaSkor() {
+        for (int i = 0; i < skolista.size(); i++){
+            System.out.println(i+" "+skolista.get(i).toString());
         }
     }
-
-    public Huvudprogram() {
-        Sko s1 = new Sko(37, "Svart", "Doc Martens");
-        Sko s2 = new Sko(37, "Svart", "Ecco");
-        Sko s3 = new Sko(37, "Blå", "Nike");
-
-        skolista.add(s1);
-        skolista.add(s2);
-        skolista.add(s3);
-
-        for (Sko s : skolista) {
-            s.print();
-        }
-        System.out.println();
-
-        addSko(37, "gul", "stövlar");
-
-        for (Sko s : skolista) {
-            s.print();
-        }
-        System.out.println();
-
-        updateColor(37, "gul", "stövlar", "orange");
-
-        for (Sko s : skolista) {
-            s.print();
-        }
-        System.out.println();
-
-        removeSko(37, "orange", "stövlar");
-
-        for (Sko s : skolista) {
-            s.print();
-        }
-        System.out.println();
-    }
-
-    public static void main(String[] args) {
-
-        Huvudprogram h = new Huvudprogram();
-
-    }
-
 
 }

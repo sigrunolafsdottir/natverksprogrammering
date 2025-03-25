@@ -1,4 +1,4 @@
-package ÖvnUppg11_serialisering;
+package V2_ÖvnUppg7_serialisering;
 
 public class Cykel extends Fordon implements Printable{
     private int antalVäxlar;

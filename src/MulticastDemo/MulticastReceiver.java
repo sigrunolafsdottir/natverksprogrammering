@@ -16,7 +16,6 @@ public class MulticastReceiver {
 
         MulticastSocket socket = new MulticastSocket(port);
         socket.joinGroup(group, netIf);
-        //socket.joinGroup(iadr);  //deprecated
 
         byte[] data = new byte[256];
         while (true) {

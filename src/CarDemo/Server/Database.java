@@ -1,6 +1,6 @@
 package CarDemo.Server;
 
-import CarDemo.Server.Car;
+import CarDemo.Util.Car;
 
 import java.util.ArrayList;
 import java.util.List;

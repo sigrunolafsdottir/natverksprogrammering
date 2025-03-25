@@ -75,9 +75,6 @@ public class Bilhyra extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        if (ae.getSource() == mätarställningNu
-                || ae.getSource() == mätarställningGammal
-                || ae.getSource() == förbrukadBensin) {
 
             //Using scanner for easy Double parsing
             Scanner scMätarställningNu = new Scanner(mätarställningNu.getText());
@@ -90,16 +87,17 @@ public class Bilhyra extends JFrame implements ActionListener {
                 double enteredMätarställningGammal = scMätarställningGammal.nextDouble();
                 double enteredFörbrukadBensin = scFörbrukadBensin.nextDouble();
 
+                double antalMil = antalKördaMil(enteredMätarställningNu, enteredMätarställningGammal);
 
                 antalKördaMil.setText(String.format("Antal körda mil: %8.0f \n",
-                        antalKördaMil(enteredMätarställningNu, enteredMätarställningGammal)));
+                        antalMil));
                 antalLiterBensinLabel.setText(String.format("Antal liter bensin: %7.1f \n",
                         enteredFörbrukadBensin));
                 förbrukningPerMilLabel.setText(String.format("Förbrukning per mil: %1.2f \n",
-                        forbrukningPerMil(enteredMätarställningNu, enteredMätarställningGammal)));
+                        forbrukningPerMil(enteredFörbrukadBensin, antalMil)));
 
             }
-        }
+
     }
 
     public static void main(String[] args) {

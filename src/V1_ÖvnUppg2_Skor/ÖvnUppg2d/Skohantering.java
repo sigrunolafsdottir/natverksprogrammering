@@ -1,9 +1,5 @@
-package V1_ÖvnUppg1_Skor.ÖvnUppg1d;
+package V1_ÖvnUppg2_Skor.ÖvnUppg2d;
 
-import V1_ÖvnUppg1_Skor.Sko;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Skohantering {
