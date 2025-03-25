@@ -32,7 +32,7 @@ public class Bilhyra extends JFrame implements ActionListener {
 
 
     public Bilhyra() {
-        //lägger ut delpanelerna
+        //lägger ut delpanelerna till programmet
         setLayout(new BorderLayout());
         add("West", questions);
         add("East", answers);
