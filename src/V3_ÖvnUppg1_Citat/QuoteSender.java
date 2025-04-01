@@ -12,21 +12,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class QuoteSender {
-    final static String quote1 = "Dreams and deception is a powerful combination";
-    final static String quote2 = "Whatever your're thinking, think bigger.";
-    final static String quote3 = "Maybe swearing will help?";
+    List<String> quoteList = List.of(
+            "Dreams and deception is a powerful combination",
+            "Whatever your're thinking, think bigger.",
+            "Maybe swearing will help?");
+    int listCounter = 0;
+    InetAddress toAdr = InetAddress.getLocalHost();
+    int toPort = 55555;
 
-
-    public static void main(String[] args) throws UnknownHostException, SocketException, IOException, InterruptedException {
-        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-        List<String> quoteList = new ArrayList<>();
-        quoteList.add(quote1);
-        quoteList.add(quote2);
-        quoteList.add(quote3);
-        int listCounter = 0;
-
-        InetAddress toAdr = InetAddress.getLocalHost();
-        int toPort = 55555;
+    public QuoteSender() throws IOException, InterruptedException {
         DatagramSocket socket = new DatagramSocket();
         while (true) {
             byte[] data = quoteList.get(listCounter).getBytes();
@@ -35,5 +29,9 @@ public class QuoteSender {
             listCounter = (listCounter + 1) % 3;
             Thread.sleep(3000);
         }
+    }
+
+    public static void main(String[] args) throws UnknownHostException, SocketException, IOException, InterruptedException {
+        QuoteSender sender = new QuoteSender();
     }
 }
