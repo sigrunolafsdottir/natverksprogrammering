@@ -13,22 +13,16 @@ public class StreamDemo {
 
         try {
             bufIn = new BufferedReader
-                    (new FileReader("src\\StreamDemo\\Luka.txt"));
+                    (new FileReader("src/StreamDemo/Luka2.txt"));
 
             //   med BufferedReader kan vi läsa en rad i taget
- //           while(tempLine != null){
- //               tempLine = bufIn.readLine();
- //               System.out.println(tempLine);
-  //          }
-
-            //     vi slipper null på slutet
             while((tempLine = bufIn.readLine()) != null){
                 System.out.println(tempLine);
             }
 
 /*
             FileReader fileIn = new FileReader(
-                    "src\\StreamDemo\\Luka.txt");
+                    "src\\StreamDemo\\Luka2.txt");
 
             while (tempInt != -1) {
                 tempInt = fileIn.read();

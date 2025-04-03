@@ -20,7 +20,7 @@ public class DatagramSender {
     String prompt = "Och vad har du på hjärtat? ";
     String message;
 
-    public DatagramSender() throws UnknownHostException, SocketException, IOException {
+    public DatagramSender() throws IOException {
         System.out.println(prompt);
         while ((message = in.readLine()) != null) {
             if (message.equals("bye")) System.exit(0);
@@ -32,7 +32,7 @@ public class DatagramSender {
         System.exit(0);
     }
 
-    public static void main(String[] args) throws UnknownHostException, SocketException, IOException {
+    public static void main(String[] args) throws  IOException {
         DatagramSender dgs = new DatagramSender();
     }
 }

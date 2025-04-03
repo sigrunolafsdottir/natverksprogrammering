@@ -15,7 +15,7 @@ public class MulticastSender {
     String ip = "239.0.1.2";
     InetAddress iadr = InetAddress.getByName(ip);
     int port = 20480;
-    MulticastSocket socket = new MulticastSocket(port);
+    MulticastSocket socket = new MulticastSocket();
 
     DatagramPacket packet;
     byte[] data;

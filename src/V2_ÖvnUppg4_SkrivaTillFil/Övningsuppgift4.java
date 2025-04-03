@@ -25,8 +25,7 @@ public class Övningsuppgift4 {
         String[] personDataParts2;
 
         //Try with resources, nya sättet med Paths och Files
-        try (PrintWriter w = new PrintWriter(Files.newBufferedWriter(outFilePath));
-             Scanner fileScanner = new Scanner(inFilePath);) {
+        try (Scanner fileScanner = new Scanner(inFilePath);) {
 
             while (fileScanner.hasNext()) {
                 Person tempPerson = new Person();
@@ -53,10 +52,10 @@ public class Övningsuppgift4 {
         }
     }
 
-    public List<Person> filterHeight(int limit){
+    public List<Person> filterHeight(){
         List<Person> temp = new ArrayList<>();
         for (Person p : allPersonList){
-            if (p.getHeight() >= limit){
+            if (p.getHeight() >= max){
                 temp.add(p);
             }
         }
@@ -67,7 +66,7 @@ public class Övningsuppgift4 {
 
         createPersonList();
 
-        List<Person> filteredList = filterHeight(max);
+        List<Person> filteredList = filterHeight();
 
         //Try with resources, nya sättet med Paths och Files
         try (PrintWriter w = new PrintWriter(Files.newBufferedWriter(outFilePath));){

@@ -32,6 +32,6 @@ public class QuoteSender {
     }
 
     public static void main(String[] args) throws UnknownHostException, SocketException, IOException, InterruptedException {
-        QuoteSender sender = new QuoteSender();
+        new QuoteSender();
     }
 }

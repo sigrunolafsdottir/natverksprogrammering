@@ -10,15 +10,15 @@ public class Övningsuppgift3 {
         double tempSum = 0;
         int amountOfDays = 0;
         double maxTemp = -Double.MAX_VALUE;
-        System.out.println(Double.MAX_VALUE);
-        System.out.println(Double.MIN_VALUE);
+       // System.out.println(Double.MAX_VALUE);
+       // System.out.println(Double.MIN_VALUE);
         double minTemp = Double.MAX_VALUE;
         String tempLine;
+
         try (BufferedReader reader = new BufferedReader(
                 new FileReader("src\\V2_ÖvnUppg3_Temperatur\\temp.txt"))) {
 
             while ((tempLine = reader.readLine()) != null) {
-
                 //bort med End of Line-tecknet och eventuella blanktecken som kan gömma sig i filen
                 temp = Double.parseDouble(tempLine.trim());
 

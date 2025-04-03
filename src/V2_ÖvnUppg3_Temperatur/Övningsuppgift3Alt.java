@@ -25,9 +25,9 @@ public class Övningsuppgift3Alt {
             System.exit(0);
         }
 
-        System.out.println("Maxtemp är " + tempList.stream().mapToDouble(d -> d).max() + "\n"
-                + "Mintemp är " + tempList.stream().mapToDouble(d -> d).min() +
-                "\nMedelvärdet är " + tempList.stream().mapToDouble(d -> d).average()
+        System.out.println("Maxtemp är " + tempList.stream().mapToDouble(d -> d).max().getAsDouble() +
+                "\nMintemp är " + tempList.stream().mapToDouble(d -> d).min().getAsDouble() +
+                "\nMedelvärdet är " + tempList.stream().mapToDouble(d -> d).average().getAsDouble()
                 + " (beräknat över " + tempList.size() + " dagar)");
     }
 

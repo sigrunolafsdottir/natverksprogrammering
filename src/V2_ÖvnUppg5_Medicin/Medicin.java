@@ -1,6 +1,8 @@
 package V2_ÖvnUppg5_Medicin;
 
 
+import javax.swing.*;
+
 public class Medicin implements Runnable {
 
     private String medicinNamn;

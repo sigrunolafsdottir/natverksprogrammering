@@ -41,11 +41,12 @@ public class PathDemo {
         writer.flush();
 
 
+
         Path path2 = Paths.get("src\\PathDemo\\filnamn2");
 
         Files.copy(path, path2, REPLACE_EXISTING);
 
-        //Files.delete(path2);
+        Files.delete(path2);
 
       //  System.out.println(path2.toString());
 

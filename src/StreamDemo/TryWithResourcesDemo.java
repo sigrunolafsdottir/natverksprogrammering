@@ -17,6 +17,7 @@ public class TryWithResourcesDemo {
             }
         } catch (Exception e) {
             System.out.println("File could not be found");
+            e.printStackTrace();
         }
     }
 
