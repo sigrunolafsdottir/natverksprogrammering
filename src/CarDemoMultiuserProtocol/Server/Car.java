@@ -1,4 +1,4 @@
-package CarDemoMultiuser.Server;
+package CarDemoMultiuserProtocol.Server;
 
 
 import java.io.Serializable;

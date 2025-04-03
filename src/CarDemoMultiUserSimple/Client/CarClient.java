@@ -1,4 +1,4 @@
-package CarDemoMultiuser.Client;
+package CarDemoMultiUserSimple.Client;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,7 +13,7 @@ public class CarClient {
     CarClient() throws IOException {
         String hostName = "127.0.0.1";  //localhost
 
-        int portNumber = 12345;
+        int portNumber = 12349;
 
 
         try (

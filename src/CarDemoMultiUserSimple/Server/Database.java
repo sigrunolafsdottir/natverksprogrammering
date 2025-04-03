@@ -1,4 +1,4 @@
-package CarDemoMultiuser.Server;
+package CarDemoMultiUserSimple.Server;
 
 import java.util.ArrayList;
 import java.util.List;

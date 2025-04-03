@@ -1,0 +1,2 @@
+Person{name='Nisse Nilsson', road=' Xvägen 5', postalAddress=' 12345 Ystad', weight=80, height=205, age=23}
+Person{name='Cecil Cellin', road=' Xvägen 8', postalAddress=' 12345 Ystad', weight=135, height=210, age=87}
