@@ -7,12 +7,12 @@ import java.util.Scanner;
 
 public class Övningsuppgift6 {
 
-    private static String s = new String();
-    private static int[] sedlarOchMynt = {1000, 500, 200, 100, 50, 20, 10, 5, 2, 1};
-    private final static String mynt = new String("kronor");
-    private final static String sedlar = new String("lappar");
+    private String s = new String();
+    private final int[] sedlarOchMynt = {1000, 500, 200, 100, 50, 20, 10, 5, 2, 1};
+    private final String mynt = new String("kronor");
+    private final String sedlar = new String("lappar");
 
-    public static void addToPrintoutString(int valör, int amountOfValör) {
+    public void addToPrintoutString(int valör, int amountOfValör) {
         String pengatyp = new String();
         if (valör >= 20) {
             pengatyp = sedlar;
@@ -24,7 +24,7 @@ public class Övningsuppgift6 {
         }
     }
 
-    public static void main(String[] args) {
+    public Övningsuppgift6() {
 
         System.out.println("Ange pris:");
         Scanner sc = new Scanner(System.in);
@@ -58,6 +58,10 @@ public class Övningsuppgift6 {
             System.out.println("Ospecifierat fel inträffade, försök igen!");
         }
 
+    }
+
+    public static void main(String[] args) {
+        Övningsuppgift6 uppg6 = new Övningsuppgift6();
     }
 
 
