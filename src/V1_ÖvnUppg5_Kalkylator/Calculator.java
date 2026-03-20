@@ -7,10 +7,7 @@ public class Calculator {
     private List<String> operatorList = List.of("+", "-", "*", "/");
 
     protected boolean operatorSupported(String operator) {
-        if (operatorList.contains(operator)) {
-            return true;
-        }
-        return false;
+        return operatorList.contains(operator);
     }
 
     protected boolean checkDivisionByZero(double b) {
