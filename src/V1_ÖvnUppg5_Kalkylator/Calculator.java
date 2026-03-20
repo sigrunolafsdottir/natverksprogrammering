@@ -1,10 +1,13 @@
 package V1_ÖvnUppg5_Kalkylator;
 
+import java.util.List;
+
 public class Calculator {
 
+    private List<String> operatorList = List.of("+", "-", "*", "/");
+
     protected boolean operatorSupported(String operator) {
-        if (operator.equalsIgnoreCase("+") || operator.equalsIgnoreCase("-") ||
-                operator.equalsIgnoreCase("*") || operator.equalsIgnoreCase("/")) {
+        if (operatorList.contains(operator)) {
             return true;
         }
         return false;
