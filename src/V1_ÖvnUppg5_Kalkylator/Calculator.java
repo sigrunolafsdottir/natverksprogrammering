@@ -23,14 +23,18 @@ public class Calculator {
             throw new OperatorNotSupportedException("Felaktig operator " + operator);
         }
 
-        if (operator.equalsIgnoreCase("+")) return a + b;
-        else if (operator.equalsIgnoreCase("-")) return a - b;
-        else if (operator.equalsIgnoreCase("*")) return a * b;
-        else {
-            if (checkDivisionByZero(b)) {
-                throw new DivisionByZeroException("Inte ok att dela med noll");
+        switch (operator) {
+            case "+": return a + b;
+            case "-": return a - b;
+            case "*": return a * b;
+            case "/": {
+                if (checkDivisionByZero(b)) {
+                    throw new DivisionByZeroException("Inte ok att dela med noll");
+                }
+                return a / b;
             }
-            return a / b;
+            default:
+                throw new DivisionByZeroException("Felaktig operator " + operator);
         }
     }
 
