@@ -1,19 +1,19 @@
 package V3_ÖvnUppg2_vädersystem_grafiskt;
 
+import V2_ÖvnUppg2_TextEditor.TextEditor;
+
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.SocketException;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
+import javax.swing.*;
 
 public class TemperatureCollector extends JFrame {
 
     JPanel panel = new JPanel();
     JTextArea text = new JTextArea(30, 20);
 
-    public TemperatureCollector() throws SocketException, IOException {
+    public TemperatureCollector() throws IOException {
         this.add(panel);
         panel.add(text);
         this.pack();
@@ -33,7 +33,8 @@ public class TemperatureCollector extends JFrame {
         }
     }
 
-    public static void main(String[] args) throws SocketException, IOException {
+    //Här funkar inte SwingUtilities.invokeLater eftersom vi har ett blockerande call till receive
+    public static void main(String[] args) throws IOException {
         TemperatureCollector tc = new TemperatureCollector();
     }
 

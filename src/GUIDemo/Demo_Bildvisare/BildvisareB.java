@@ -44,6 +44,6 @@ public class BildvisareB extends JFrame implements ActionListener {
     }
     
     public static void main(String args[]){
-        BildvisareB bildvisare = new BildvisareB();
+        SwingUtilities.invokeLater(() -> new BildvisareB());
     }
 }

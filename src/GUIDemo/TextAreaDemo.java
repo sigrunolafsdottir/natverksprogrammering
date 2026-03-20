@@ -4,13 +4,9 @@ import java.awt.BorderLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JButton;
-import javax.swing.JFrame;
+import javax.swing.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
-
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
 
 
 public class TextAreaDemo extends JFrame implements ActionListener {
@@ -46,6 +42,6 @@ public class TextAreaDemo extends JFrame implements ActionListener {
     }
 
     public static void main(String[] arg) {
-        TextAreaDemo t = new TextAreaDemo();
+        SwingUtilities.invokeLater(() -> new TextAreaDemo());
     }
 }

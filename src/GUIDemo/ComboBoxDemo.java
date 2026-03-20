@@ -45,7 +45,7 @@ public class ComboBoxDemo extends JFrame implements ActionListener {
 
 
     public static void main(String[] arg) {
-        ComboBoxDemo t = new ComboBoxDemo();
+        SwingUtilities.invokeLater(() -> new ComboBoxDemo());
     }
 }
 

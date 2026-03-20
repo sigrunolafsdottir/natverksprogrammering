@@ -58,7 +58,7 @@ public class BildvisareC extends JFrame implements ActionListener {
 
     
     public static void main(String args[]){
-        BildvisareC bildvisare = new BildvisareC();
+        SwingUtilities.invokeLater(() -> new BildvisareC());
     }
 
     public static int getNextIndex(int imageIndex, int imageCount){

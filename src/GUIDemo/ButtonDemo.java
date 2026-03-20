@@ -3,10 +3,7 @@ package GUIDemo;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 public class ButtonDemo extends JFrame implements ActionListener {
 
@@ -39,7 +36,7 @@ public class ButtonDemo extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        ButtonDemo g = new ButtonDemo();
+        SwingUtilities.invokeLater(() -> new ButtonDemo());
     }
 
 

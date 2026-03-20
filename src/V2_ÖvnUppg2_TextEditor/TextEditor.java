@@ -1,5 +1,7 @@
 package V2_ÖvnUppg2_TextEditor;
 
+import V2_ÖvnUppg1_bilhyra.Bilhyra;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
@@ -83,6 +85,6 @@ public class TextEditor extends JFrame implements ActionListener {
     }
 
     public static void main(String[] arg) {
-        TextEditor t = new TextEditor();
+        SwingUtilities.invokeLater(() -> new TextEditor());
     }
 }

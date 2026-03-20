@@ -12,6 +12,7 @@ public class ListDemo {
     public static void main(String[] args) {
 
         List<String> l = List.of("Toker", "Blyger", "Prosit", "Trötter");
+        //l.add("Nisse");   //lurig, runtimeError
 
         List<String> l2 = new LinkedList<>();
         l2.add("Snövit");
@@ -58,6 +59,10 @@ public class ListDemo {
         System.out.println(simpsons);
 
         simpsons.forEach(i -> System.out.println(i.name));
+
+        List<Integer> l3 =new ArrayList<>(List.of(1,2,3,4));
+        l3.add(8);
+        l3.forEach(System.out::println);
 
     }
 }

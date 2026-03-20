@@ -1,15 +1,13 @@
 package V2_ÖvnUppg1_bilhyra;
 
+import GUIDemo.Demo_Bildvisare.BildvisareA;
+
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Scanner;
-import javax.swing.JFrame;
-
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
 
 
 public class Bilhyra extends JFrame implements ActionListener {
@@ -61,12 +59,12 @@ public class Bilhyra extends JFrame implements ActionListener {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
-    protected static double forbrukningPerMil(double amountOfGas,
+    protected double forbrukningPerMil(double amountOfGas,
                                               double antalKördaMil) {
         return amountOfGas / antalKördaMil;
     }
 
-    protected static double antalKördaMil(double currentMätarställning,
+    protected double antalKördaMil(double currentMätarställning,
                                           double oldMätarställning) {
         return currentMätarställning - oldMätarställning;
     }
@@ -99,6 +97,6 @@ public class Bilhyra extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        Bilhyra ö = new Bilhyra();
+        SwingUtilities.invokeLater(() -> new Bilhyra());
     }
 }

@@ -1,17 +1,15 @@
 package V3_ÖvnUppg2_vädersystem_grafiskt;
 
+import V2_ÖvnUppg1_bilhyra.Bilhyra;
+import V2_ÖvnUppg2_TextEditor.TextEditor;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
 
 public class TemperatureSensor extends JFrame implements ActionListener {
 
@@ -60,7 +58,14 @@ public class TemperatureSensor extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        TemperatureSensor ts = new TemperatureSensor();
+        SwingUtilities.invokeLater(() -> {
+            try {
+                new TemperatureSensor();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+
     }
 
 

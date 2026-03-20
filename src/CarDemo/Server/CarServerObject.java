@@ -23,7 +23,6 @@ public class CarServerObject {
                 ObjectInputStream ois = new ObjectInputStream(clientSocket.getInputStream());
         ) {
             String inputLine;
-            String outputLine;
             Car tempcar;
 
             oos.writeObject("Vilken bil vill du slå upp?");

@@ -1,12 +1,9 @@
 package GUIDemo;
 
 import java.awt.FlowLayout;
-import javax.swing.JFrame;
+import javax.swing.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
-
-import javax.swing.JLabel;
-import javax.swing.JPanel;
 
 
 public class JLabelDemo extends JFrame {
@@ -24,7 +21,7 @@ public class JLabelDemo extends JFrame {
     }
 
     public static void main(String[] args) {
-        JLabelDemo g = new JLabelDemo();
+        SwingUtilities.invokeLater(() -> new JLabelDemo());
     }
 
 }

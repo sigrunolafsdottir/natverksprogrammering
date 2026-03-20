@@ -5,8 +5,8 @@ import java.net.*;
 public class URLDemo {
     public static void main(String[] args) throws Exception {
 
-        URL aURL = new URL("http://example.com:80/docs/books/tutorial"
-                + "/index.html?name=networking#DOWNLOADING");
+        URL aURL = URI.create("http://example.com:80/docs/books/tutorial"
+                + "/index.html?name=networking#DOWNLOADING").toURL();
 
         System.out.println("protocol = " + aURL.getProtocol());
         System.out.println("authority = " + aURL.getAuthority());

@@ -1,4 +1,7 @@
-package ThreadDemo;
+package ThreadDemoOLD;
+
+//inte längre rekommenderat att ärva Tread, bättre att använda Runnable (interface) och virutella trådar
+//se ThreadDemoInterface-koden
 
 public class ThreadDemo {
 

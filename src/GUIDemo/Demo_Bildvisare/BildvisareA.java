@@ -1,5 +1,7 @@
 package GUIDemo.Demo_Bildvisare;
 
+import GUIDemo.RadioButtonDemo;
+
 import java.awt.Color;
 import java.awt.FlowLayout;
 import javax.swing.*;
@@ -27,6 +29,6 @@ public class BildvisareA extends JFrame {
     }
     
     public static void main(String args[]){
-        BildvisareA bildvisare = new BildvisareA();
+        SwingUtilities.invokeLater(() -> new BildvisareA());
     }
 }

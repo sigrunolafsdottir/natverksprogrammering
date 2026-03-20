@@ -1,11 +1,9 @@
 package GUIDemo;
 
 import java.awt.FlowLayout;
-import javax.swing.JFrame;
+import javax.swing.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
-
-import javax.swing.JPanel;
 
 
 public class JPanelDemo extends JFrame {
@@ -22,7 +20,7 @@ public class JPanelDemo extends JFrame {
     }
 
     public static void main(String[] args) {
-        JPanelDemo g = new JPanelDemo();
+        SwingUtilities.invokeLater(() -> new JPanelDemo());
     }
 
 }

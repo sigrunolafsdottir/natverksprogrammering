@@ -3,13 +3,9 @@ package GUIDemo;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JFrame;
+import javax.swing.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
-
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
 
 
 public class JTextFieldDemo extends JFrame implements ActionListener {
@@ -36,7 +32,7 @@ public class JTextFieldDemo extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        JTextFieldDemo g = new JTextFieldDemo();
+        SwingUtilities.invokeLater(() -> new JTextFieldDemo());
     }
 
 }

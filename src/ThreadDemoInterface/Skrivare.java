@@ -3,7 +3,6 @@ package ThreadDemoInterface;
 
 public class Skrivare implements Runnable {
 
-    public Thread aktivitet = new Thread(this);
     private String text;
     private long interval;
 
@@ -13,7 +12,7 @@ public class Skrivare implements Runnable {
     }
 
     public void run() {
-        while (!Thread.interrupted()) {
+        while (!Thread.currentThread().isInterrupted()) {
             try {
                 Thread.sleep(interval);
                 System.out.println(text);

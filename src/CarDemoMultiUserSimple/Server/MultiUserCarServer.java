@@ -42,15 +42,7 @@ public class MultiUserCarServer extends Thread {
                 }
             }
 
-            /*
-            CarProtokoll protocol = new CarProtokoll();
-            out.println(protocol.processInput(null));
 
-            while ((inputLine = in.readLine()) != null) {
-                out.println(protocol.processInput(inputLine));
-            }
-
-             */
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -1,13 +1,9 @@
 package GUIDemo;
 
 import java.awt.*;
-import javax.swing.JButton;
-import javax.swing.JFrame;
+import javax.swing.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
-
-import javax.swing.JLabel;
-import javax.swing.JPanel;
 
 
 public class JFrameDemo  {
@@ -21,7 +17,7 @@ public class JFrameDemo  {
     JButton button3 = new JButton("gdfgddgd");
     JButton button4 = new JButton("jghjhgjg");
 
-    JFrameDemo() {
+    public JFrameDemo() {
         jframe.add(panel);
         panel.setLayout(new GridLayout(2,2));
         panel.add(label);
@@ -38,7 +34,7 @@ public class JFrameDemo  {
     }
 
     public static void main(String[] args) {
-        JFrameDemo g = new JFrameDemo();
+        SwingUtilities.invokeLater(() -> new JFrameDemo());
     }
 
 }
