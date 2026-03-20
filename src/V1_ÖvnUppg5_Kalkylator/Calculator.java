@@ -4,13 +4,6 @@ package V1_ÖvnUppg5_Kalkylator;
 public class Calculator {
 
 
-    protected boolean checkDivisionByZero(double b) {
-        if (b == 0) {
-            return true;
-        }
-        return false;
-    }
-
     public double calculate(double a, double b, String operator)
             throws OperatorNotSupportedException, DivisionByZeroException {
 
@@ -19,7 +12,7 @@ public class Calculator {
             case "-": yield a - b;
             case "*": yield a * b;
             case "/": {
-                if (checkDivisionByZero(b)) {
+                if (b==0) {
                     throw new DivisionByZeroException("Inte ok att dela med noll");
                 }
                 yield a / b;
