@@ -85,6 +85,6 @@ public class TextEditor extends JFrame implements ActionListener {
     }
 
     public static void main(String[] arg) {
-        SwingUtilities.invokeLater(() -> new TextEditor());
+        SwingUtilities.invokeLater(TextEditor::new);
     }
 }

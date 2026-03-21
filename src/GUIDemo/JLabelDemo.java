@@ -21,7 +21,7 @@ public class JLabelDemo extends JFrame {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new JLabelDemo());
+        SwingUtilities.invokeLater(JLabelDemo::new);
     }
 
 }

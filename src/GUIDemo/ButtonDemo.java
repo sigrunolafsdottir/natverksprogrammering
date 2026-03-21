@@ -36,7 +36,7 @@ public class ButtonDemo extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new ButtonDemo());
+        SwingUtilities.invokeLater(ButtonDemo::new);
     }
 
 

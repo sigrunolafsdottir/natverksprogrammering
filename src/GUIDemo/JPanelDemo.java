@@ -20,7 +20,7 @@ public class JPanelDemo extends JFrame {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new JPanelDemo());
+        SwingUtilities.invokeLater(JPanelDemo::new);
     }
 
 }

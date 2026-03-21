@@ -97,6 +97,6 @@ public class Bilhyra extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new Bilhyra());
+        SwingUtilities.invokeLater(Bilhyra::new);
     }
 }

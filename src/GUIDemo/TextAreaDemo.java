@@ -42,6 +42,6 @@ public class TextAreaDemo extends JFrame implements ActionListener {
     }
 
     public static void main(String[] arg) {
-        SwingUtilities.invokeLater(() -> new TextAreaDemo());
+        SwingUtilities.invokeLater(TextAreaDemo::new);
     }
 }

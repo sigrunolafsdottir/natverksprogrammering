@@ -48,7 +48,7 @@ public class CheckBoxDemo extends JFrame implements ActionListener {
 
 
     public static void main(String[] arg) {
-        SwingUtilities.invokeLater(() -> new CheckBoxDemo());
+        SwingUtilities.invokeLater(CheckBoxDemo::new);
     }
 }
 

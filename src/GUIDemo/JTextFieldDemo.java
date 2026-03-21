@@ -32,7 +32,7 @@ public class JTextFieldDemo extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new JTextFieldDemo());
+        SwingUtilities.invokeLater(JTextFieldDemo::new);
     }
 
 }

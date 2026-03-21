@@ -54,7 +54,7 @@ public class RadioButtonDemo extends JFrame implements ActionListener {
 
 
     public static void main(String[] arg) {
-        SwingUtilities.invokeLater(() -> new RadioButtonDemo());
+        SwingUtilities.invokeLater(RadioButtonDemo::new);
     }
 }
 
