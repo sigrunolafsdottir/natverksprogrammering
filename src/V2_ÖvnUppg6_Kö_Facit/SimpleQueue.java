@@ -10,14 +10,14 @@ public class SimpleQueue {
     }
 
     public synchronized void put(QueueElement obj) {
-        System.out.println("Putting " + obj.getText());
-        int p = Thread.currentThread().getPriority();
+        int p = obj.pri;
         int i;
 
         //leta baklänges i kön tills rätt prio hittas
-        for (i = size() - 1; i >= 0 && p > ((QueueElement) l.get(i)).pri; i--)
+        for (i = size() - 1; i >= 0 && p > (l.get(i)).pri; i--)
             ;
         l.add(i + 1, obj);
+        System.out.println("Putting " + obj.getText()+ "med prio: "+obj.pri +" på plats "+(i+1));
         notify();
 
     }
@@ -29,7 +29,7 @@ public class SimpleQueue {
             } catch (InterruptedException e) {
                 return null;
             }
-        QueueElement e = (QueueElement) l.get(0);
+        QueueElement e = l.get(0);
         l.remove(0);
         return e;
     }

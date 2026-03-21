@@ -22,7 +22,7 @@ public class MainClass {
             p[i] = new Producer(txt, time, pri, buf);
         }
 
-        System.out.println("Amount of comsumers: ");
+        System.out.println("Amount of consumers: ");
         Consumer[] c = new Consumer[sc.nextInt()];
         for (int i = 0; i < c.length; i++) {
             System.out.println(" Interval:");
@@ -31,10 +31,10 @@ public class MainClass {
         }
 
         for (int i = 0; i < p.length; i++) {
-            p[i].aktivitet.start();
+            Thread.startVirtualThread(p[i]);
         }
         for (int i = 0; i < c.length; i++) {
-            c[i].aktivitet.start();
+            Thread.startVirtualThread(c[i]);
         }
         Thread.sleep(15000);
         System.out.println("Antal kvar i kön " + buf.size());

@@ -30,10 +30,10 @@ public class MainClass {
         }
 
         for (int i = 0; i < p.length; i++) {
-            p[i].aktivitet.start();
+            Thread.startVirtualThread(p[i]);
         }
         for (int i = 0; i < c.length; i++) {
-            c[i].aktivitet.start();
+            Thread.startVirtualThread(c[i]);
         }
 
         Thread.sleep(15000);

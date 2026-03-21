@@ -23,8 +23,7 @@ public class MedicinMain {
             }
 
             Medicin m = new Medicin(medicin, ggr);
-            Thread t = new Thread(m);
-            t.start();
+            Thread.startVirtualThread(m);
         }
         System.exit(0);
     }

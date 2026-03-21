@@ -2,7 +2,6 @@ package V2_ÖvnUppg6_Kö;
 
 
 public class Consumer implements Runnable {
-    public Thread aktivitet = new Thread(this);
     private int interval;
     private SimpleQueue q;
 
@@ -12,10 +11,10 @@ public class Consumer implements Runnable {
     }
 
     public void run() {
-        while (!Thread.interrupted()) {
+        while (!Thread.currentThread().isInterrupted()) {
             try {
                 Thread.sleep(interval);
-                QueueElement e = (QueueElement) q.take();
+                QueueElement e = q.take();
                 System.out.println("Taking " + e.getText());
             } catch (InterruptedException e) {
                 break;

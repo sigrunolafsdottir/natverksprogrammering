@@ -2,6 +2,7 @@ package ThreadDemoOLD;
 
 //inte längre rekommenderat att ärva Tread, bättre att använda Runnable (interface) och virutella trådar
 //se ThreadDemoInterface-koden
+//Detta är ett äldre sätt att skriva
 
 public class ThreadDemo {
 

@@ -23,7 +23,7 @@ public class SimpleQueue {
             } catch (InterruptedException e) {
                 return null;
             }
-        QueueElement e = (QueueElement) l.get(0);
+        QueueElement e = l.get(0);
         l.remove(0);
         return e;
     }

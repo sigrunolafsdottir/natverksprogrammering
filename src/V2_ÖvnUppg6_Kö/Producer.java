@@ -3,7 +3,6 @@ package V2_ÖvnUppg6_Kö;
 
 public class Producer implements Runnable {
 
-    public Thread aktivitet = new Thread(this);
     private QueueElement obj;
     private int interval;
     private SimpleQueue q;
@@ -15,7 +14,7 @@ public class Producer implements Runnable {
     }
 
     public void run() {
-        while (!Thread.interrupted()) {
+        while (!Thread.currentThread().isInterrupted()) {
             try {
                 Thread.sleep(interval);
                 q.put(obj);

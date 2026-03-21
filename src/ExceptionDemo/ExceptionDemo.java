@@ -5,6 +5,7 @@ public class ExceptionDemo {
         throw new TestException("TestException Occurred in seconmethod");
     }
 
+
     void firstMethod() throws TestException {
         // throw new TestException("TestException Occurred in firstMethod");
         //    try{

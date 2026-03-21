@@ -15,7 +15,7 @@ public class Medicin implements Runnable {
 
     @Override
     public void run() {
-        while (!Thread.interrupted()) {
+        while (!Thread.currentThread().isInterrupted()) {
             try {
                 Thread.sleep(Math.round(interval));
                 System.out.println("Dags att ta " + medicinNamn);
